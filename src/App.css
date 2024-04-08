@@ -1,19 +1,22 @@
 .App {
   text-align: center;
-  visibility: hidden;
+  display: center;
 }
 .Home {
   text-align: center;
-  visibility: visible;
+  display: center;
   margin-bottom: 20%;
 }
 .Basic {
+  display: none;
   visibility: hidden;
 }
 .Advanced {
+  display: none;
   visibility: hidden;
 }
 .Results{
+  display: none;
   visibility: hidden;
 }
 
@@ -66,6 +69,12 @@
   font-weight: bold;
   }
 
+  .App-rect1 p {
+    margin-top: 5%;
+    display: block;
+    font-weight: normal;
+  }
+
   .App-rect2 {
     width: 49%;
     background-color:white;
@@ -73,6 +82,12 @@
     float: right; 
     color: black;
     font-weight: bold;
+  }
+
+  .App-rect2 p {
+    margin-top: 5%;
+    display: block;
+    font-weight: normal;
   }
 
   .Home-footer{
@@ -97,4 +112,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.lightButton {
+  height: 100px;
+  width: 150px;
 }

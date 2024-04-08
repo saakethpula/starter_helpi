@@ -13,7 +13,7 @@ if (prevKey !== null) {
 
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
-  
+  const [page, setPage] = useState<string>("App");
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
@@ -24,53 +24,74 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
+  function changePageHome() {
+    setPage("Home");
+    console.log("changed")
+  }
+  function changePageBasic() {
+    setPage("App");
+    console.log("changed")
+  }
+  function changePageDetail() {
+    setPage("App");
+    console.log("changed")
+  }
   return (
     <div>
-      <div className = "App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-          Brendon Uzoigwe, Girish Sista, Saaketh Pula.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn
-          </a>
-        </header>
-      </div>
-      <div className="Home">
-          <header className="Home-header">
-          Use these quizzes to help you find a career you love!
+      
+      <Button className = "lightButton" variant= "primary" onClick={changePageHome}>Home</Button>
+
+      {page === 'App' && (
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>
+              Brendon Uzoigwe, Girish Sista, Saaketh Pula.
+            </p>
+            <a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn React
+            </a>
           </header>
-          <p className="Description"> We use AI to analyze your answers to help you find the perfect career based on your interests and qualities</p>
-          <Container>
-        <Row className='col'>
-          <Col>
-            <div className="App-rect1">Basic Questions
-            <p> This Button will take you to some basic questions</p> 
-            </div>           
-          </Col>
-          <Col>
-            <div className="App-rect2">Detailed Questions
-            <p> This Button will take you to some detailed questions</p>
-            </div>
-          </Col>
-        </Row>
-      </Container>
         </div>
+      )}
+      {page === 'Home' && (
+        <div className="Home">
+        <header className="Home-header">
+        Use these quizzes to help you find a career you love!
+        </header>
+        <p className="Description"> We use AI to analyze your answers to help you find the perfect career based on your interests and qualities</p>
+        <Container>
+      <Row className='col'>
+        <Col>
+          <div className="App-rect1">Basic Questions
+          <p> This Button will take you to some basic questions</p> 
+          <Button className = "lightButton" variant= "primary" onClick={changePageBasic}>Basic Questions</Button>
+          </div>           
+        </Col>
+        <Col>
+          <div className="App-rect2">Detailed Questions
+          <p>This Button will take you to some detailed questions</p>
+          <Button className = "lightButton" variant= "primary" onClick={changePageDetail}>Detailed Questions</Button>
+
+          </div>
+        </Col>
+      </Row>
+    </Container>
+      </div>      )}
         <footer className="Home-footer">
       These quizzes should not be used as the sole decision when considering a career
       
         </footer>
       <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
-        <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+          <Form.Label>API Key:</Form.Label>
+          <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+          <br></br>
+          <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
     </div>
   );
