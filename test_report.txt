@@ -12,29 +12,31 @@ FAIL src/App.test.tsx
     Ignored nodes: comments, script, style
     [36m<body>[39m
       [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
+        [36m<div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"App"[39m
           [36m>[39m
-            [36m<img[39m
-              [33malt[39m=[32m"logo"[39m
-              [33mclass[39m=[32m"App-logo"[39m
-              [33msrc[39m=[32m"logo.svg"[39m
-            [36m/>[39m
-            [36m<p>[39m
-              [0mBrendon Uzoigwe, Girish Sista, Saaketh Pula.[0m
-            [36m</p>[39m
-            [36m<a[39m
-              [33mclass[39m=[32m"App-link"[39m
-              [33mhref[39m=[32m"https://reactjs.org"[39m
-              [33mrel[39m=[32m"noopener noreferrer"[39m
-              [33mtarget[39m=[32m"_blank"[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"App-header"[39m
             [36m>[39m
-              [0mLearn[0m
-            [36m</a>[39m
-          [36m</header>[39m
+              [36m<img[39m
+                [33malt[39m=[32m"logo"[39m
+                [33mclass[39m=[32m"App-logo"[39m
+                [33msrc[39m=[32m"logo.svg"[39m
+              [36m/>[39m
+              [36m<p>[39m
+                [0mBrendon Uzoigwe, Girish Sista, Saaketh Pula.[0m
+              [36m</p>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"App-link"[39m
+                [33mhref[39m=[32m"https://reactjs.org"[39m
+                [33mrel[39m=[32m"noopener noreferrer"[39m
+                [33mtarget[39m=[32m"_blank"[39m
+              [36m>[39m
+                [0mLearn[0m
+              [36m</a>[39m
+            [36m</header>[39m
+          [36m</div>[39m
           [36m<form[39m
             [33mclass[39m=[32m""[39m
           [36m>[39m
@@ -89,7 +91,7 @@ All files           |   28.57 |    16.66 |      20 |   28.57 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.636 s
+Time:        2.647 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
