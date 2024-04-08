@@ -13,7 +13,7 @@ if (prevKey !== null) {
 
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
-  
+  const [page, setPage] = useState<string>("App");
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
@@ -24,29 +24,51 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
+  function changePageHome() {
+    setPage("Home");
+    console.log("changed")
+  }
+  function changePageBasic() {
+    setPage("App");
+    console.log("changed")
+  }
+  function changePageDetail() {
+    setPage("App");
+    console.log("changed")
+  }
   return (
     <div>
-      <div className = "App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-          Brendon Uzoigwe, Girish Sista, Saaketh Pula.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn
-          </a>
-        </header>
-      </div>
-      <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
-        <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+      
+      <Button className = "lightButton" variant= "primary" onClick={changePageHome}>Home</Button>
+      <Button className = "lightButton" variant= "primary" onClick={changePageBasic}>Basic Questions</Button>
+      <Button className = "lightButton" variant= "primary" onClick={changePageDetail}>Detailed Questions</Button>
+
+      {page === 'App' && (
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>
+              Brendon Uzoigwe, Girish Sista, Saaketh Pula.
+            </p>
+            <a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn React
+            </a>
+          </header>
+        </div>
+      )}
+      {page === 'Home' && (
+        "Home test"
+      )}
+        <Form>
+          <Form.Label>API Key:</Form.Label>
+          <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+          <br></br>
+          <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
     </div>
   );

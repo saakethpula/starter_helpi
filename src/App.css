@@ -1,18 +1,21 @@
 .App {
   text-align: center;
-  visibility: hidden;
+  display: center;
 }
 .Home {
-  visibility: visible;
+  display: center;
   text-align: center;
 }
 .Basic {
+  display: none;
   visibility: hidden;
 }
 .Advanced {
+  display: none;
   visibility: hidden;
 }
 .Results{
+  display: none;
   visibility: hidden;
 }
 
@@ -49,4 +52,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.lightButton {
+  height: 100px;
+  width: 150px;
 }
