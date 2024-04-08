@@ -46,7 +46,7 @@ function App() {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
-              Brendon Uzoigwe, Girish Sista, Saaketh Pula.
+              Brendon Uzoigwe, vjc Girish Sista, Saaketh Pula.
             </p>
             <a
               className="App-link"
