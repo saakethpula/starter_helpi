@@ -26,8 +26,8 @@ function App() {
   }
   return (
     <div>
-    <div className="App">
-      <header className="App-header">
+      <div className="App">
+        <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
         Brendon Uzoigwe, Girish Sista, Saaketh Pula.
@@ -40,7 +40,7 @@ function App() {
         >
           Learn
         </a>
-      </header>
+      </header></div>
       <Form>
         <Form.Label>API Key:</Form.Label>
         <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
