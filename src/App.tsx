@@ -25,7 +25,7 @@ function App() {
     setKey(event.target.value);
   }
   return (
-    <div className="App">
+    <div className="Home">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
