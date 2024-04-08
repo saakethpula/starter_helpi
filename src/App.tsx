@@ -84,7 +84,7 @@ function App() {
     </Container>
       </div>      )}
         <footer className="Home-footer">
-      These quizzes should n be used as the sole decision when considering a career
+      These quizzes should not be used as the sole decision when considering a career
       
         </footer>
       <Form>
