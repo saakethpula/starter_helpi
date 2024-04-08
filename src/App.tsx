@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -40,8 +40,6 @@ function App() {
     <div>
       
       <Button className = "lightButton" variant= "primary" onClick={changePageHome}>Home</Button>
-      <Button className = "lightButton" variant= "primary" onClick={changePageBasic}>Basic Questions</Button>
-      <Button className = "lightButton" variant= "primary" onClick={changePageDetail}>Detailed Questions</Button>
 
       {page === 'App' && (
         <div className="App">
@@ -62,9 +60,34 @@ function App() {
         </div>
       )}
       {page === 'Home' && (
-        "Home test"
-      )}
-        <Form>
+        <div className="Home">
+        <header className="Home-header">
+        Use these quizzes to help you find a career you love!
+        </header>
+        <p className="Description"> We use AI to analyze your answers to help you find the perfect career based on your interests and qualities</p>
+        <Container>
+      <Row className='col'>
+        <Col>
+          <div className="App-rect1">Basic Questions
+          <p> This Button will take you to some basic questions</p> 
+          <Button className = "lightButton" variant= "primary" onClick={changePageBasic}>Basic Questions</Button>
+          </div>           
+        </Col>
+        <Col>
+          <div className="App-rect2">Detailed Questions
+          <p>This Button will take you to some detailed questions</p>
+          <Button className = "lightButton" variant= "primary" onClick={changePageDetail}>Detailed Questions</Button>
+
+          </div>
+        </Col>
+      </Row>
+    </Container>
+      </div>      )}
+        <footer className="Home-footer">
+      These quizzes should not be used as the sole decision when considering a career
+      
+        </footer>
+      <Form>
           <Form.Label>API Key:</Form.Label>
           <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
           <br></br>
