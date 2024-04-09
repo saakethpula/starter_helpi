@@ -13,7 +13,7 @@ if (prevKey !== null) {
 
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
-  const [page, setPage] = useState<string>("App");
+  const [page, setPage] = useState<string>("Home");
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
@@ -77,12 +77,11 @@ function App() {
           <div className="App-rect2">Detailed Questions
           <p>This Button will take you to some detailed questions</p>
           <Button className = "lightButton" variant= "primary" onClick={changePageDetail}>Detailed Questions</Button>
-
           </div>
         </Col>
       </Row>
     </Container>
-      </div>      )}
+      </div>)}
         <footer className="Home-footer">
       These quizzes should not be used as the sole decision when considering a career
       
