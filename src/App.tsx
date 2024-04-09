@@ -20,6 +20,7 @@ function App() {
     window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
   }
 
+
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
@@ -29,34 +30,70 @@ function App() {
     console.log("changed")
   }
   function changePageBasic() {
-    setPage("App");
+    setPage("Basic");
     console.log("changed")
   }
   function changePageDetail() {
-    setPage("App");
+    setPage("Detail");
     console.log("changed")
   }
   return (
     <div>
-      
-      <Button className = "lightButton" variant= "primary" onClick={changePageHome}>Home</Button>
-
-      {page === 'App' && (
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Brendon Uzoigwe, vjc Girish Sista, Saaketh Pula.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
+      <Button variant= "danger" onClick={changePageHome}>Home</Button>
+      {page === 'Basic' && (
+        <div className="Basic">
+          Basic
+        </div>
+      )}
+      {page === 'Detail' && (
+        <div className="Detail">
+          <Form>
+            <Form.Label>Consider the role of failure in career growth. How do you approach setbacks and challenges, and what strategies do you employ to bounce back and persevere?</Form.Label>
+            <Form.Control type="password" placeholder="Answer" ></Form.Control>
+            <br></br>
+            <Button className="Submit-Button">Submit</Button>
+          </Form>
+          <Form>
+            <Form.Label>Reflect on the impact you want to have on your community or society through your career. </Form.Label>
+            <Form.Control type="password" placeholder="Answer" ></Form.Control>
+            <br></br>
+            <Button className="Submit-Button">Submit</Button>
+          </Form>
+          <Form>
+            <Form.Label>Reflect on a moment in your life when you felt completely immersed and engaged in what you were doing. What were you doing, and how can you incorporate similar elements into your future career?</Form.Label>
+            <Form.Control type="password" placeholder="Answer" ></Form.Control>
+            <br></br>
+            <Button className="Submit-Button">Submit</Button>
+          </Form>
+          <Form>
+            <Form.Label>Consider the lifestyle you envision for yourself in the future. How does your ideal work-life balance look, and which career paths align with your desired lifestyle?</Form.Label>
+            <Form.Control type="password" placeholder="Answer" ></Form.Control>
+            <br></br>
+            <Button className="Submit-Button">Submit</Button>
+          </Form>
+          <Form>
+            <Form.Label>Consider the future of work and emerging industries. Which trends or technologies do you find most exciting, and how could you position yourself to capitalize on these opportunities?</Form.Label>
+            <Form.Control type="password" placeholder="Answer" ></Form.Control>
+            <br></br>
+            <Button className="Submit-Button">Submit</Button>
+          </Form>
+          <Form>
+            <Form.Label>Reflect on a moment when you felt deeply fulfilled and energized by your work, regardless of whether it was a paid job or a volunteer opportunity. What aspects of that experience can you identify as key drivers for your career satisfaction?</Form.Label>
+            <Form.Control type="password" placeholder="Answer" ></Form.Control>
+            <br></br>
+            <Button className="Submit-Button">Submit</Button>
+          </Form>
+          <Form>
+            <Form.Label>Reflect on your preferred work style and environment. Are you more drawn to structured routines, flexibility, or a mix of both?</Form.Label>
+            <Form.Control type="password" placeholder="Answer" ></Form.Control>
+            <br></br>
+            <Button className="Submit-Button">Submit</Button>
+          </Form>
+        </div>
+      )}
+      {page === 'Results' && (
+        <div className="Results">
+          Results
         </div>
       )}
       {page === 'Home' && (
