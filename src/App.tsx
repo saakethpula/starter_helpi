@@ -107,13 +107,13 @@ function App() {
         <Col>
           <div className="App-rect1">Basic Questions
           <p> This Button will take you to some basic questions</p> 
-          <Button className = "lightButton" variant= "primary" onClick={changePageBasic}>Basic Questions</Button>
+          <Button className = "lightButton" variant= "danger" onClick={changePageBasic}>Basic Questions</Button>
           </div>           
         </Col>
         <Col>
           <div className="App-rect2">Detailed Questions
           <p>This Button will take you to some detailed questions</p>
-          <Button className = "lightButton" variant= "primary" onClick={changePageDetail}>Detailed Questions</Button>
+          <Button className = "lightButton" variant= "danger" onClick={changePageDetail}>Detailed Questions</Button>
           </div>
         </Col>
       </Row>
