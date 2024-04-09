@@ -8,12 +8,12 @@
   margin-bottom: 20%;
 }
 .Basic {
-  display: none;
-  visibility: hidden;
+  text-align: center;
+  display: center;
 }
-.Advanced {
-  display: none;
-  visibility: hidden;
+.Detail {
+  text-align: center;
+  display: center;
 }
 .Results{
   display: none;
