@@ -40,6 +40,7 @@ function App() {
   return (
     <div>
       <Button variant= "danger" onClick={changePageHome}>Home</Button>
+      <img className = "logo" src="../unclogo.png" alt="Logo of UNC" />
       {page === 'Basic' && (
         <div className="Basic">
           Basic
