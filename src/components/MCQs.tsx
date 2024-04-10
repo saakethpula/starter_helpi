@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 export{}
 export function MCQs(): JSX.Element{
+    /** */
     const [selected, setSelected] = useState<string>('');
     function updateSelected(event: React.ChangeEvent<HTMLSelectElement>){
         setSelected(event.target.value);
@@ -37,10 +38,10 @@ export function MCQs(): JSX.Element{
         setSelected6(event.target.value);
 
     }
-    let options:string[] = ["Creativity and innovation",
-        "Analytical thinking and problem-solving",
-        "Communication and interpersonal skills",
-        "Attention to detail and organization"
+    let options:string[] = ["Creativity and innovation ",
+        "Analytical thinking and problem-solving ",
+        "Communication and interpersonal skills ",
+        "Attention to detail and organization "
         ];
     let options1:string[] = ["Embrace them as opportunities for growth",
         "Analyze the situation and devise a strategic solution",
@@ -71,24 +72,24 @@ export function MCQs(): JSX.Element{
     return(
         <div>
            <Form.Group controlId="MCQs">
-                    <Form.Label>1.What type of work environment do you prefer?</Form.Label>
+                    <Form.Label>1. What type of work environment do you prefer?</Form.Label>
                     <Form.Select value={selected} onChange={updateSelected}>
-                            <option key="Fast-paced and dynamic" value="Fast-paced and dynamic">
+                            <option key="Fast paced and dynamic" value="fast-paced and dynamic">
                     Fast-paced and dynamic
                             </option>
-                            <option key="Quiet and structured" value="FQuiet and structured">
+                            <option key="Quiet and structured" value="quiet and structured">
                             Quiet and structured
                             </option>
-                            <option key="Collaborative and team-oriented" value="Collaborative and team-oriented">
+                            <option key="Collaborative and team oriented" value="collaborative and team-oriented">
                             Collaborative and team-oriented
                             </option>
-                            <option key="independent and self-directed" value="independent and self-directed">
+                            <option key="independent and self directed" value="independent and self-directed">
                             independent and self-directed
                             </option>
                     </Form.Select>
 
 
-                    <Form.Label>2.What skill are you most proud of?</Form.Label>
+                    <Form.Label>2. What skill are you most proud of?</Form.Label>
                     <Form.Select value={selected1} onChange={updateSelected1}>
                     {options.map((option: string) => (
                             <option key={option} value={option}>
@@ -98,7 +99,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>3.How do you handle challenges or setbacks?</Form.Label>
+                    <Form.Label>3. How do you handle challenges or setbacks?</Form.Label>
                     <Form.Select value={selected2} onChange={updateSelected2}>
                     {options1.map((option: string) => (
                             <option key={option} value={option}>
@@ -108,7 +109,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>4.Which of the following activities do you enjoy the most?</Form.Label>
+                    <Form.Label>4. Which of the following activities do you enjoy the most?</Form.Label>
                     <Form.Select value={selected3} onChange={updateSelected3}>
                     {options2.map((option: string) => (
                             <option key={option} value={option}>
@@ -118,7 +119,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>5.What motivates you in your work?</Form.Label>
+                    <Form.Label>5. What motivates you in your work?</Form.Label>
                     <Form.Select value={selected4} onChange={updateSelected4}>
                     {options3.map((option: string) => (
                             <option key={option} value={option}>
@@ -128,7 +129,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>6.How do you prefer to learn new skills or information?</Form.Label>
+                    <Form.Label>6. How do you prefer to learn new skills or information?</Form.Label>
                     <Form.Select value={selected5} onChange={updateSelected5}>
                     {options4.map((option: string) => (
                             <option key={option} value={option}>
@@ -138,7 +139,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>7.What industry or field interests you the most?</Form.Label>
+                    <Form.Label>7. What industry or field interests you the most?</Form.Label>
                     <Form.Select value={selected6} onChange={updateSelected6}>
                     {options5.map((option: string) => (
                             <option key={option} value={option}>
