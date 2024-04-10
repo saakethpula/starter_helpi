@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-
+import {MCQs} from './components/MCQs';
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
 const saveKeyData = "MYKEY";
@@ -43,7 +43,7 @@ function App() {
       <img className = "logo" src="../unclogo.png" alt="Logo of UNC" />
       {page === 'Basic' && (
         <div className="Basic">
-          Basic
+          <MCQs></MCQs>
         </div>
       )}
       {page === 'Detail' && (
@@ -92,6 +92,11 @@ function App() {
           </Form>
         </div>
       )}
+
+
+
+
+
       {page === 'Results' && (
         <div className="Results">
           Results
