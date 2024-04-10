@@ -2,9 +2,39 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 export{}
 export function MCQs(): JSX.Element{
-    const [selected, setSelected] = useState<string>();
-    function updateSelected(event: React.ChangeEvent<HTMLSelectElement>) {
+    const [selected, setSelected] = useState<string>('');
+    function updateSelected(event: React.ChangeEvent<HTMLSelectElement>){
         setSelected(event.target.value);
+
+    }
+    const [selected1, setSelected1] = useState<string>('');
+    function updateSelected1(event: React.ChangeEvent<HTMLSelectElement>){
+        setSelected1(event.target.value);
+
+    }
+    const [selected2, setSelected2] = useState<string>('');
+    function updateSelected2(event: React.ChangeEvent<HTMLSelectElement>){
+        setSelected2(event.target.value);
+
+    }
+    const [selected3, setSelected3] = useState<string>('');
+    function updateSelected3(event: React.ChangeEvent<HTMLSelectElement>){
+        setSelected3(event.target.value);
+
+    }
+    const [selected4, setSelected4] = useState<string>('');
+    function updateSelected4(event: React.ChangeEvent<HTMLSelectElement>){
+        setSelected4(event.target.value);
+
+    }
+    const [selected5, setSelected5] = useState<string>('');
+    function updateSelected5(event: React.ChangeEvent<HTMLSelectElement>){
+        setSelected5(event.target.value);
+
+    }
+    const [selected6, setSelected6] = useState<string>('');
+    function updateSelected6(event: React.ChangeEvent<HTMLSelectElement>){
+        setSelected6(event.target.value);
 
     }
     let options:string[] = ["Creativity and innovation",
@@ -40,7 +70,7 @@ export function MCQs(): JSX.Element{
 
     return(
         <div>
-            <Form.Group controlId="MCQs">
+           <Form.Group controlId="MCQs">
                     <Form.Label>1.What type of work environment do you prefer?</Form.Label>
                     <Form.Select value={selected} onChange={updateSelected}>
                             <option key="Fast-paced and dynamic" value="Fast-paced and dynamic">
@@ -59,7 +89,7 @@ export function MCQs(): JSX.Element{
 
 
                     <Form.Label>2.What skill are you most proud of?</Form.Label>
-                    <Form.Select value={selected} onChange={updateSelected}>
+                    <Form.Select value={selected1} onChange={updateSelected1}>
                     {options.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
@@ -68,8 +98,8 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>1.What type of work environment do you prefer?</Form.Label>
-                    <Form.Select value={selected} onChange={updateSelected}>
+                    <Form.Label>3.How do you handle challenges or setbacks?</Form.Label>
+                    <Form.Select value={selected2} onChange={updateSelected2}>
                     {options1.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
@@ -78,8 +108,8 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>1.What type of work environment do you prefer?</Form.Label>
-                    <Form.Select value={selected} onChange={updateSelected}>
+                    <Form.Label>4.Which of the following activities do you enjoy the most?</Form.Label>
+                    <Form.Select value={selected3} onChange={updateSelected3}>
                     {options2.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
@@ -88,8 +118,8 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>1.What type of work environment do you prefer?</Form.Label>
-                    <Form.Select value={selected} onChange={updateSelected}>
+                    <Form.Label>5.What motivates you in your work?</Form.Label>
+                    <Form.Select value={selected4} onChange={updateSelected4}>
                     {options3.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
@@ -98,8 +128,8 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>1.What type of work environment do you prefer?</Form.Label>
-                    <Form.Select value={selected} onChange={updateSelected}>
+                    <Form.Label>6.How do you prefer to learn new skills or information?</Form.Label>
+                    <Form.Select value={selected5} onChange={updateSelected5}>
                     {options4.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
@@ -108,8 +138,8 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>1.What type of work environment do you prefer?</Form.Label>
-                    <Form.Select value={selected} onChange={updateSelected}>
+                    <Form.Label>7.What industry or field interests you the most?</Form.Label>
+                    <Form.Select value={selected6} onChange={updateSelected6}>
                     {options5.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
