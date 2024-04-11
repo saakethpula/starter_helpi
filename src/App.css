@@ -10,6 +10,8 @@
 .Basic {
   text-align: center;
   display: center;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .Detail {
   text-align: center;
