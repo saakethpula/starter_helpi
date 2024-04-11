@@ -39,7 +39,7 @@ function App() {
   return (
     <div>
       <Button variant= "danger" onClick={changePageHome}>Home</Button>
-      <img className = "logo" src="../unclogo.png" alt="Logo of UNC" />
+      <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
       {page === 'Basic' && (
         <div className="Basic">
           <MCQs></MCQs>
