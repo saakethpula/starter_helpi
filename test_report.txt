@@ -22,7 +22,7 @@ FAIL src/App.test.tsx
           [36m<img[39m
             [33malt[39m=[32m"Logo of UNC"[39m
             [33mclass[39m=[32m"logo"[39m
-            [33msrc[39m=[32m"../unclogo.png"[39m
+            [33msrc[39m=[32m"https://i.imgur.com/wnwq3pn.png"[39m
           [36m/>[39m
           [36m<div[39m
             [33mclass[39m=[32m"Home"[39m
@@ -144,5 +144,5 @@ All files            |   12.72 |    42.85 |    4.54 |   12.72 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.28 s
+Time:        2.418 s
 Ran all test suites.
