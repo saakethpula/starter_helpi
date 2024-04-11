@@ -8,32 +8,32 @@ export function MCQs(): JSX.Element{
         setSelected(event.target.value);
 
     }
-    const [selected1, setSelected1] = useState<string>('');
+    const [selected2, setSelected1] = useState<string>('');
     function updateSelected1(event: React.ChangeEvent<HTMLSelectElement>){
         setSelected1(event.target.value);
 
     }
-    const [selected2, setSelected2] = useState<string>('');
+    const [selected3, setSelected2] = useState<string>('');
     function updateSelected2(event: React.ChangeEvent<HTMLSelectElement>){
         setSelected2(event.target.value);
 
     }
-    const [selected3, setSelected3] = useState<string>('');
+    const [selected4, setSelected3] = useState<string>('');
     function updateSelected3(event: React.ChangeEvent<HTMLSelectElement>){
         setSelected3(event.target.value);
 
     }
-    const [selected4, setSelected4] = useState<string>('');
+    const [selected5, setSelected4] = useState<string>('');
     function updateSelected4(event: React.ChangeEvent<HTMLSelectElement>){
         setSelected4(event.target.value);
 
     }
-    const [selected5, setSelected5] = useState<string>('');
+    const [selected6, setSelected5] = useState<string>('');
     function updateSelected5(event: React.ChangeEvent<HTMLSelectElement>){
         setSelected5(event.target.value);
 
     }
-    const [selected6, setSelected6] = useState<string>('');
+    const [selected7, setSelected6] = useState<string>('');
     function updateSelected6(event: React.ChangeEvent<HTMLSelectElement>){
         setSelected6(event.target.value);
 
@@ -90,7 +90,7 @@ export function MCQs(): JSX.Element{
 
 
                     <Form.Label>2. What skill are you most proud of?</Form.Label>
-                    <Form.Select value={selected1} onChange={updateSelected1}>
+                    <Form.Select value={selected2} onChange={updateSelected1}>
                     {options.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
@@ -100,7 +100,7 @@ export function MCQs(): JSX.Element{
 
 
                     <Form.Label>3. How do you handle challenges or setbacks?</Form.Label>
-                    <Form.Select value={selected2} onChange={updateSelected2}>
+                    <Form.Select value={selected3} onChange={updateSelected2}>
                     {options1.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
@@ -110,7 +110,7 @@ export function MCQs(): JSX.Element{
 
 
                     <Form.Label>4. Which of the following activities do you enjoy the most?</Form.Label>
-                    <Form.Select value={selected3} onChange={updateSelected3}>
+                    <Form.Select value={selected4} onChange={updateSelected3}>
                     {options2.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
@@ -120,7 +120,7 @@ export function MCQs(): JSX.Element{
 
 
                     <Form.Label>5. What motivates you in your work?</Form.Label>
-                    <Form.Select value={selected4} onChange={updateSelected4}>
+                    <Form.Select value={selected5} onChange={updateSelected4}>
                     {options3.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
@@ -130,7 +130,7 @@ export function MCQs(): JSX.Element{
 
 
                     <Form.Label>6. How do you prefer to learn new skills or information?</Form.Label>
-                    <Form.Select value={selected5} onChange={updateSelected5}>
+                    <Form.Select value={selected6} onChange={updateSelected5}>
                     {options4.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
@@ -140,7 +140,7 @@ export function MCQs(): JSX.Element{
 
 
                     <Form.Label>7. What industry or field interests you the most?</Form.Label>
-                    <Form.Select value={selected6} onChange={updateSelected6}>
+                    <Form.Select value={selected7} onChange={updateSelected6}>
                     {options5.map((option: string) => (
                             <option key={option} value={option}>
                                 {option}
