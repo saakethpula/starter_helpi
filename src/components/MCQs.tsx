@@ -72,7 +72,7 @@ export function MCQs(): JSX.Element{
     return(
         <div>
            <Form.Group controlId="MCQs">
-                    <Form.Label>1. What type of work environment do you prefer?</Form.Label>
+                    <Form.Label className = "Bold">1. What type of work environment do you prefer?</Form.Label>
                     <Form.Select value={selected} onChange={updateSelected}>
                             <option key="Fast paced and dynamic" value="fast-paced and dynamic">
                     Fast-paced and dynamic
@@ -89,7 +89,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>2. What skill are you most proud of?</Form.Label>
+                    <Form.Label className = "Bold">2. What skill are you most proud of?</Form.Label>
                     <Form.Select value={selected2} onChange={updateSelected1}>
                     {options.map((option: string) => (
                             <option key={option} value={option}>
@@ -99,7 +99,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>3. How do you handle challenges or setbacks?</Form.Label>
+                    <Form.Label className = "Bold">3. How do you handle challenges or setbacks?</Form.Label>
                     <Form.Select value={selected3} onChange={updateSelected2}>
                     {options1.map((option: string) => (
                             <option key={option} value={option}>
@@ -109,7 +109,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>4. Which of the following activities do you enjoy the most?</Form.Label>
+                    <Form.Label className = "Bold">4. Which of the following activities do you enjoy the most?</Form.Label>
                     <Form.Select value={selected4} onChange={updateSelected3}>
                     {options2.map((option: string) => (
                             <option key={option} value={option}>
@@ -119,7 +119,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>5. What motivates you in your work?</Form.Label>
+                    <Form.Label className = "Bold">5. What motivates you in your work?</Form.Label>
                     <Form.Select value={selected5} onChange={updateSelected4}>
                     {options3.map((option: string) => (
                             <option key={option} value={option}>
@@ -129,7 +129,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>6. How do you prefer to learn new skills or information?</Form.Label>
+                    <Form.Label className = "Bold">6. How do you prefer to learn new skills or information?</Form.Label>
                     <Form.Select value={selected6} onChange={updateSelected5}>
                     {options4.map((option: string) => (
                             <option key={option} value={option}>
@@ -139,7 +139,7 @@ export function MCQs(): JSX.Element{
                     </Form.Select>
 
 
-                    <Form.Label>7. What industry or field interests you the most?</Form.Label>
+                    <Form.Label className = "Bold">7. What industry or field interests you the most?</Form.Label>
                     <Form.Select value={selected7} onChange={updateSelected6}>
                     {options5.map((option: string) => (
                             <option key={option} value={option}>
