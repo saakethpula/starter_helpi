@@ -1,6 +1,6 @@
 import { OpenAI } from 'openai';
 
-const openai = new OpenAI({ apiKey: "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", dangerouslyAllowBrowser: true });
+const openai = new OpenAI({ apiKey: "", dangerouslyAllowBrowser: true });
 
 export async function generateDetailed(detailedAnswers: string[]) {
   const questions = [
