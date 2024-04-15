@@ -114,32 +114,32 @@ export function MCQs(): JSX.Element{
         setSelected6(event.target.value);
 
     }
-    let options:string[] = ["Select an Option","Creativity and innovation ",
+    let options:string[] = ["Creativity and innovation ",
         "Analytical thinking and problem-solving ",
         "Communication and interpersonal skills ",
         "Attention to detail and organization "
         ];
-    let options1:string[] = ["Select an Option","Embrace them as opportunities for growth",
+    let options1:string[] = ["Embrace them as opportunities for growth",
         "Analyze the situation and devise a strategic solution",
         "Seek support and advice from others",
         "Stay focused and determined until the issue is resolved"
         ];
-    let options2:string[] = ["Select an Option","Coming up with new ideas and brainstorming",
+    let options2:string[] = ["Coming up with new ideas and brainstorming",
         "Solving complex puzzles or problems",
        "Working closely with others to achieve a common goal",
         "Following step-by-step instructions to complete a task"
        ];
-    let options3:string[] = ["Select an Option","Making a positive impact on others or society",
+    let options3:string[] = ["Making a positive impact on others or society",
         "Challenging yourself and reaching new goals",
         "Building strong relationships with colleagues or clients",
         "Maintaining stability and security in your career"
         ];
-    let options4:string[] = ["Select an Option","Experimenting and trying things out on your own",
+    let options4:string[] = ["Experimenting and trying things out on your own",
         "Reading books or articles",
         "Participating in workshops or group discussions",
         "Watching tutorials or receiving hands-on training"
         ];
-    let options5:string[] = ["Select an Option","Technology and innovation",
+    let options5:string[] = ["Technology and innovation",
         "Finance and business",
         "Healthcare and social services",
         "Arts and entertainment"
