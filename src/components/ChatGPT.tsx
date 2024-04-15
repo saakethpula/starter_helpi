@@ -1,5 +1,4 @@
 import { OpenAI } from 'openai';
-
 const openai = new OpenAI({ apiKey: "", dangerouslyAllowBrowser: true });
 
 export async function generateDetailed(detailedAnswers: string[]) {
@@ -17,7 +16,7 @@ export async function generateDetailed(detailedAnswers: string[]) {
     model: "gpt-4-0125-preview",
     messages: [
       { role: 'system', content: 'You are a Career Assessment quiz results generator' },
-      { role: 'user', content: `Give me a list of careers using these answers: ${detailedAnswers.join(', ')} to these Questions: ${questions.join(', ')}. Just give me 3 options and number them and use backslash n to separate them.` }
+      { role: 'user', content: `Give me a list of careers using these answers: ${detailedAnswers.join(', ')} to these Questions: ${questions.join(', ')}. Just give me 3 options and number them.` }
     ],
     temperature: 0.5,
   });
@@ -25,3 +24,4 @@ export async function generateDetailed(detailedAnswers: string[]) {
   const result = completion.choices[0].message.content;
   return result;
 }
+
