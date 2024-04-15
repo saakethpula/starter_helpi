@@ -146,3 +146,9 @@
 .Space{
   margin-bottom: 2%;
 }
+
+.Space .form-check input[type="radio"] {
+  float: none;
+  clear: none;
+  margin-right: 1%;
+}
