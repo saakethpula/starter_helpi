@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
+import ProgressBar from './bar';
 
 export function DetailedQs(): JSX.Element {
     const [index,setIndex] = useState<number>(0);
@@ -19,6 +20,7 @@ export function DetailedQs(): JSX.Element {
 
     return (
         <div className="Detail">
+          <div className='Space'><ProgressBar value={index} maxValue={6}/></div>
           <Form>
             <Form.Label className = "Bold">Consider the role of failure in career growth. How do you approach setbacks and challenges, and what strategies do you employ to bounce back and persevere?</Form.Label>
             <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(0)}></Form.Control>            <br></br>
