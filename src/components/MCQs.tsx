@@ -1,94 +1,31 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
-<<<<<<< HEAD
-import "./MCQs.css";
-export{}
-export function MCQs(): JSX.Element{
-    /** <Form.Group controlId="MCQs">
-                    <Form.Label className = "Bold">1. What type of work environment do you prefer?</Form.Label>
-                    <Form.Select className = "Space" value={selected} onChange={updateSelected}>
-                            <option value="">
-                            Select an Option
-                            </option>
-                            <option key="Fast paced and dynamic" value="fast-paced and dynamic">
-                            Fast-paced and dynamic
-                            </option>
-                            <option key="Quiet and structured" value="quiet and structured">
-                            Quiet and structured
-                            </option>
-                            <option key="Collaborative and team oriented" value="collaborative and team-oriented">
-                            Collaborative and team-oriented
-                            </option>
-                            <option key="independent and self directed" value="independent and self-directed">
-                            independent and self-directed
-                            </option>
-                    </Form.Select>
-                    <Form.Label className = "Bold">2. What skill are you most proud of?</Form.Label>
-                    <Form.Select className = "Space" value={selected2} onChange={updateSelected1}>
-                    {options.map((option: string) => (
-                            <option key={option} value={option}>
-                                {option}
-                            </option>
-                        ))}
-                    </Form.Select>
-                    <Form.Label className = "Bold">3. How do you handle challenges or setbacks?</Form.Label>
-                    <Form.Select className = "Space" value={selected3} onChange={updateSelected2}>
-                    {options1.map((option: string) => (
-                            <option key={option} value={option}>
-                                {option}
-                            </option>
-                        ))}
-                    </Form.Select>
-
-
-                    <Form.Label className = "Bold">4. Which of the following activities do you enjoy the most?</Form.Label>
-                    <Form.Select className = "Space" value={selected4} onChange={updateSelected3}>
-                    {options2.map((option: string) => (
-                            <option key={option} value={option}>
-                                {option}
-                            </option>
-                        ))}
-                    </Form.Select>
-
-
-                    <Form.Label className = "Bold">5. What motivates you in your work?</Form.Label>
-                    <Form.Select className = "Space" value={selected5} onChange={updateSelected4}>
-                    {options3.map((option: string) => (
-                            <option key={option} value={option}>
-                                {option}
-                            </option>
-                        ))}
-                    </Form.Select>
-
-
-                    <Form.Label className = "Bold">6. How do you prefer to learn new skills or information?</Form.Label>
-                    <Form.Select className = "Space" value={selected6} onChange={updateSelected5}>
-                    {options4.map((option: string) => (
-                            <option key={option} value={option}>
-                                {option}
-                            </option>
-                        ))}
-                    </Form.Select>
-
-
-                    <Form.Label className = "Bold">7. What industry or field interests you the most?</Form.Label>
-                    <Form.Select className = "Space" value={selected7} onChange={updateSelected6}>
-                    {options5.map((option: string) => (
-                            <option key={option} value={option}>
-                                {option}
-                            </option>
-                        ))}
-                    </Form.Select>
-                    
-                </Form.Group>*/
-    const [selected, setSelected] = useState<string>('');
-    function updateSelected(event: React.ChangeEvent<HTMLInputElement>){
-        setSelected(event.target.value);
-=======
->>>>>>> 3dcf62e9216dbe1d8a10bba6b136b05d4d699013
+import ProgressBar from "./bar";
 
 export function MCQs(): JSX.Element {
     const [selectedAnswers, setSelectedAnswers] = useState<string[]>(Array(7).fill(''));
+    const[progress,setProgress] = useState<number>(0);
+    function updateProgress1(){
+        setProgress(1);
+    }
+    function updateProgress2(){
+        setProgress(2);
+    }
+    function updateProgress3(){
+        setProgress(3);
+    }
+    function updateProgress4(){
+        setProgress(4);
+    }
+    function updateProgress5(){
+        setProgress(5);
+    }
+    function updateProgress6(){
+        setProgress(6);
+    }
+    function updateProgress7(){
+        setProgress(7);
+    }
     function handleAnswerSelection(index: number, value: string) {
         setSelectedAnswers(prevAnswers => {
             const newAnswers = [...prevAnswers];
@@ -96,6 +33,27 @@ export function MCQs(): JSX.Element {
             console.log(newAnswers);
             return newAnswers;
         });
+        if(index === 0){
+            updateProgress1();
+        }
+        else if(index === 1){
+            updateProgress2();
+        }
+        else if(index === 2){
+            updateProgress3();
+        }
+        else if(index === 3){
+            updateProgress4();
+        }
+        else if(index === 4){
+            updateProgress5();
+        }
+        else if(index === 5){
+            updateProgress6();
+        }
+        else if(index === 6){
+            updateProgress7();
+        }
     }
 
     let questions = [
@@ -119,6 +77,10 @@ export function MCQs(): JSX.Element {
     ];
 
     return (
+        <><div className="Progress-Bar">
+            <div className="Progress">{Math.round((progress/7)*100)} % </div>
+            <ProgressBar value={progress} maxValue={7} />
+        </div>
         <div className="Center">
             <Form.Group controlId="MCQs">
                 {questions.map((question, index) => (
@@ -133,13 +95,12 @@ export function MCQs(): JSX.Element {
                                     name={`question-${index}`}
                                     value={option}
                                     checked={selectedAnswers[index] === option}
-                                    onChange={() => handleAnswerSelection(index, option)}
-                                />
+                                    onChange={() => handleAnswerSelection(index, option)} />
                             ))}
                         </div>
                     </div>
                 ))}
             </Form.Group>
-        </div>
+        </div></>
     );
 }
