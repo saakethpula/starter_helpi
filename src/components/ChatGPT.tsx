@@ -1,5 +1,6 @@
 import { OpenAI } from 'openai';
-const openai = new OpenAI({ apiKey: "", dangerouslyAllowBrowser: true });
+const openai = new OpenAI({ apiKey: JSON.parse(localStorage.getItem("MYKEY") || '""') 
+, dangerouslyAllowBrowser: true });
 
 export async function generateDetailed(detailedAnswers: string[]) {
   const questions = [
