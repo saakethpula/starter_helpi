@@ -5,7 +5,7 @@ import ProgressBar from "./bar";
 export function MCQs(): JSX.Element {
     const [selectedAnswers, setSelectedAnswers] = useState<string[]>(Array(7).fill(''));
     const[progress,setProgress] = useState<number>(0);
-    function updateProgress1(){
+    function updateProgress(){
         setProgress(1);
     }
     function updateProgress2(){
@@ -34,7 +34,7 @@ export function MCQs(): JSX.Element {
             return newAnswers;
         });
         if(index === 0){
-            updateProgress1();
+            updateProgress();
         }
         else if(index === 1){
             updateProgress2();
