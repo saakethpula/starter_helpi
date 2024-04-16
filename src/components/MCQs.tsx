@@ -1,8 +1,31 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import ProgressBar from "./bar";
 
 export function MCQs(): JSX.Element {
     const [selectedAnswers, setSelectedAnswers] = useState<string[]>(Array(7).fill(''));
+    const[progress,setProgress] = useState<number>(0);
+    function updateProgress(){
+        setProgress(1);
+    }
+    function updateProgress2(){
+        setProgress(2);
+    }
+    function updateProgress3(){
+        setProgress(3);
+    }
+    function updateProgress4(){
+        setProgress(4);
+    }
+    function updateProgress5(){
+        setProgress(5);
+    }
+    function updateProgress6(){
+        setProgress(6);
+    }
+    function updateProgress7(){
+        setProgress(7);
+    }
     function handleAnswerSelection(index: number, value: string) {
         setSelectedAnswers(prevAnswers => {
             const newAnswers = [...prevAnswers];
@@ -10,6 +33,27 @@ export function MCQs(): JSX.Element {
             console.log(newAnswers);
             return newAnswers;
         });
+        if(index === 0){
+            updateProgress();
+        }
+        else if(index === 1){
+            updateProgress2();
+        }
+        else if(index === 2){
+            updateProgress3();
+        }
+        else if(index === 3){
+            updateProgress4();
+        }
+        else if(index === 4){
+            updateProgress5();
+        }
+        else if(index === 5){
+            updateProgress6();
+        }
+        else if(index === 6){
+            updateProgress7();
+        }
     }
 
     let questions = [
@@ -33,6 +77,10 @@ export function MCQs(): JSX.Element {
     ];
 
     return (
+        <><div className="Progress-Bar">
+            <div className="Progress">{Math.round((progress/7)*100)} % </div>
+            <ProgressBar value={progress} maxValue={7} />
+        </div>
         <div className="Center">
             <Form.Group controlId="MCQs">
                 {questions.map((question, index) => (
@@ -47,13 +95,12 @@ export function MCQs(): JSX.Element {
                                     name={`question-${index}`}
                                     value={option}
                                     checked={selectedAnswers[index] === option}
-                                    onChange={() => handleAnswerSelection(index, option)}
-                                />
+                                    onChange={() => handleAnswerSelection(index, option)} />
                             ))}
                         </div>
                     </div>
                 ))}
             </Form.Group>
-        </div>
+        </div></>
     );
 }

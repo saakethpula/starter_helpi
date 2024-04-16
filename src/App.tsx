@@ -55,9 +55,10 @@ function App() {
         <Button className="homeButton" variant= "primary" onClick={changePageHome} >Home</Button>
         <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
       {page === 'Basic' && (
+
+      
         <div className="Basic">
-          <MCQs></MCQs>
-          <Button className="Submit-Button" variant = "primary" onClick = {changePageResultsB}>Submit</Button>
+        <MCQs></MCQs><Button className="Submit-Button" variant="primary" onClick={changePageResultsB}>Submit</Button>
         </div>
       )}
       {page === 'Detail' && (
