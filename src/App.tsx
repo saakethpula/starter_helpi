@@ -51,19 +51,19 @@ function App() {
   }
   
   return (
-    <div>
-      <Button variant= "danger" onClick={changePageHome}>Home</Button>
-      <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
+    <div className='background'>
+        <Button className="homeButton" variant= "primary" onClick={changePageHome} >Home</Button>
+        <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
       {page === 'Basic' && (
         <div className="Basic">
           <MCQs></MCQs>
-          <Button className="Submit-Button" variant = "danger" onClick = {changePageResultsB}>Submit</Button>
+          <Button className="Submit-Button" variant = "primary" onClick = {changePageResultsB}>Submit</Button>
         </div>
       )}
       {page === 'Detail' && (
         <div className="Detail">
           <DetailedQs></DetailedQs>
-          <Button className="Submit-Button" variant = "danger" onClick = {changePageResultsD}>Submit</Button>
+          <Button className="Submit-Button" variant = "primary" onClick = {changePageResultsD}>Submit</Button>
         </div>
       )}
 
@@ -83,13 +83,13 @@ function App() {
         <Col>
           <div className="App-rect1">Basic Questions
           <p> This Button will take you to some basic questions</p> 
-          <Button className = "lightButton" variant= "danger" onClick={changePageBasic}>Basic Questions</Button>
+          <Button className = "lightButton" variant= "primary" onClick={changePageBasic}>Basic Questions</Button>
           </div>           
         </Col>
         <Col>
           <div className="App-rect2">Detailed Questions
           <p>This Button will take you to some detailed questions</p>
-          <Button className = "lightButton" variant= "danger" onClick={changePageDetail}>Detailed Questions</Button>
+          <Button className = "lightButton" variant= "primary" onClick={changePageDetail}>Detailed Questions</Button>
           </div>
         </Col>
       </Row>
@@ -102,7 +102,7 @@ function App() {
           <Form.Label>API Key:</Form.Label>
           <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
           <br></br>
-          <Button variant = "danger" onClick={handleSubmit}>Submit</Button>
+          <Button variant = "primary" onClick={handleSubmit}>Submit</Button>
       </Form>
     </div>
   );
