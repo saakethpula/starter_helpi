@@ -2,13 +2,12 @@
     text-align: center;
 }
 
-.Space input[type="radio"] {
-    display: inline-block;
-    vertical-align: middle;
-}
+input[type="radio"] {
+    margin-right: 0.5em;
+  }
 
 .Space label {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 10%; /* Adjust as needed */
+    margin-right: 10px; /* Adjust as needed */
 }
