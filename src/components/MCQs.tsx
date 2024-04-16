@@ -5,26 +5,62 @@ import ProgressBar from "./bar";
 export function MCQs(): JSX.Element {
     const [selectedAnswers, setSelectedAnswers] = useState<string[]>(Array(7).fill(''));
     const[progress,setProgress] = useState<number>(0);
+    const[isSelected1,setIsSelected] = useState<boolean>(false);
+    const[isSelected2,setIsSelected2] = useState<boolean>(false);
+    const[isSelected3,setIsSelected3] = useState<boolean>(false);
+    const[isSelected4,setIsSelected4] = useState<boolean>(false);
+    const[isSelected5,setIsSelected5] = useState<boolean>(false);
+    const[isSelected6,setIsSelected6] = useState<boolean>(false);
+    const[isSelected7,setIsSelected7] = useState<boolean>(false);
+
     function updateProgress(){
-        setProgress(1);
+        if(!isSelected1){
+            setProgress(1);
+            setIsSelected(true);
+
+        }
+        
     }
     function updateProgress2(){
-        setProgress(2);
+        if(!isSelected2){
+            setProgress(2);
+            setIsSelected2(true);
+
+        }
     }
     function updateProgress3(){
-        setProgress(3);
+        if(!isSelected3){
+            setProgress(3);
+            setIsSelected3(true);
+
+        }
     }
     function updateProgress4(){
-        setProgress(4);
+        if(!isSelected4){
+            setProgress(4);
+            setIsSelected4(true);
+
+        }
     }
     function updateProgress5(){
-        setProgress(5);
+        if(!isSelected5){
+            setProgress(5);
+            setIsSelected5(true);
+
+        }
     }
     function updateProgress6(){
-        setProgress(6);
+        if(!isSelected6){
+            setProgress(6);
+            setIsSelected6(true);
+        }
     }
     function updateProgress7(){
-        setProgress(7);
+        if(!isSelected7){
+            setProgress(7);
+            setIsSelected7(true);
+
+        }
     }
     function handleAnswerSelection(index: number, value: string) {
         setSelectedAnswers(prevAnswers => {
