@@ -9,5 +9,5 @@ input[type="radio"] {
 .Space label {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 10px; /* Adjust as needed */
+    margin-right: 10%; /* Adjust as needed */
 }
