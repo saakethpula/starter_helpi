@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
-
+import ProgressBar from 'react-bootstrap';
 export function DetailedQs(): JSX.Element {
     const [index,setIndex] = useState<number>(0);
     const [detailedAnswers, setDetailedAnswers] = useState<string[]>(["","","","","","",""]);
