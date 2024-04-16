@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import "./MCQs.css";
 export{}
 export function MCQs(): JSX.Element{
     /** <Form.Group controlId="MCQs">
