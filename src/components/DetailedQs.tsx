@@ -22,6 +22,7 @@ export function DetailedQs(): JSX.Element {
         <div className="Detail">
           <div className="Progress">{Math.round((index/6)*100)} % </div>
           <div className='Space'><ProgressBar value={index} maxValue={6}/></div>
+          <div className='standardQsDetailed'>
           <Form>
             <Form.Label className = "Bold">Consider the role of failure in career growth. How do you approach setbacks and challenges, and what strategies do you employ to bounce back and persevere?</Form.Label>
             <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(0)}></Form.Control>            <br></br>
@@ -56,6 +57,10 @@ export function DetailedQs(): JSX.Element {
             <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(6)}></Form.Control>            <br></br>
             <br></br>
           </Form>
+          </div>
+          <div className="firstAddedDetailed">
+            
+          </div>
         </div>
     )
 }

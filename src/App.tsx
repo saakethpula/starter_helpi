@@ -13,7 +13,7 @@ if (prevKey !== null) {
 }
 
 function App() {
-  const [result, setResult] = useState<string>("");
+  const [result, setResult] = useState<string>("Loading Results...");
   const [detailedAnswers] = useState<string[]>(["","","","","","",""]); 
   const [basicAnswers] = useState<string[]>(["","","","","","",""]); // Initialize the state with an array of 7 empty strings
   const [key, setKey] = useState<string>(keyData); //for api key input
@@ -44,6 +44,7 @@ function App() {
   }
   //changes the page to the page where the results of the detailed quiz are displayed
   async function changePageResultsD() {
+    setResult("Loading Results...")
     setPage("Results");
     generateDetailed(detailedAnswers).then(resolvedValue => {
       setResult(resolvedValue || ""); // Provide a default value for setResult
@@ -52,8 +53,8 @@ function App() {
   }
   //changes the page to the page where the results of the basic quiz are displayed
   function changePageResultsB() {
+    setResult("Loading Results...")
     setPage("Results");
-    setResult("Basic Results");
     generateBasic(basicAnswers).then(resolvedValue => {
       setResult(resolvedValue || ""); // Provide a default value for setResult
     });
@@ -65,8 +66,6 @@ function App() {
         <Button className="homeButton" variant= "primary" onClick={changePageHome} >Home</Button>
         <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
       {page === 'Basic' && (
-
-
         <div className="Basic">
         <MCQs></MCQs><Button className="Submit-Button" variant="primary" onClick={changePageResultsB}>Submit</Button>
         </div>
@@ -80,7 +79,7 @@ function App() {
 
       {page === 'Results' && (
         <div className="Results">
-          <p> {result} </p>
+          <p className='chatResults'> {result} </p>
         </div>
       )}
       {page === 'Home' && (
