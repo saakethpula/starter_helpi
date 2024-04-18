@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import {MCQs} from './components/MCQs';
-import { generateDetailed } from './components/ChatGPT';
+import { generateDetailed,generateBasic } from './components/ChatGPT';
 import {DetailedQs} from './components/DetailedQs';
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -15,6 +15,7 @@ if (prevKey !== null) {
 function App() {
   const [result, setResult] = useState<string>("");
   const [detailedAnswers] = useState<string[]>(["","","","","","",""]); 
+  const [basicAnswers] = useState<string[]>(["","","","","","",""]); // Initialize the state with an array of 7 empty strings
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [page, setPage] = useState<string>("Home");
   //sets the local storage item to the api key the user inputed
@@ -48,6 +49,9 @@ function App() {
   function changePageResultsB() {
     setPage("Results");
     setResult("Basic Results");
+    generateBasic(basicAnswers).then(resolvedValue => {
+      setResult(resolvedValue || ""); // Provide a default value for setResult
+    });
   }
   
   return (
@@ -55,8 +59,6 @@ function App() {
         <Button className="homeButton" variant= "primary" onClick={changePageHome} >Home</Button>
         <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
       {page === 'Basic' && (
-
-      
         <div className="Basic">
         <MCQs></MCQs><Button className="Submit-Button" variant="primary" onClick={changePageResultsB}>Submit</Button>
         </div>
