@@ -26,18 +26,22 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
+  //changes the page to the home page
   function changePageHome() {
     setPage("Home");
     console.log("changed")
   }
+  //changes the page to the basic questions page
   function changePageBasic() {
     setPage("Basic");
     console.log("changed")
   }
+  //changes the page to the detailed questions page
   function changePageDetail() {
     setPage("Detail");
     console.log("changed")
   }
+  //changes the page to the page where the results of the detailed quiz are displayed
   async function changePageResultsD() {
     setPage("Results");
     generateDetailed(detailedAnswers).then(resolvedValue => {
@@ -45,18 +49,20 @@ function App() {
     });
     console.log(result);
   }
+  //changes the page to the page where the results of the basic quiz are displayed
   function changePageResultsB() {
     setPage("Results");
     setResult("Basic Results");
   }
   
   return (
+    //displays the logo
     <div className='background'>
         <Button className="homeButton" variant= "primary" onClick={changePageHome} >Home</Button>
         <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
       {page === 'Basic' && (
 
-      
+
         <div className="Basic">
         <MCQs></MCQs><Button className="Submit-Button" variant="primary" onClick={changePageResultsB}>Submit</Button>
         </div>
