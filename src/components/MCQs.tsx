@@ -3,8 +3,13 @@ import { Button, Form } from "react-bootstrap";
 import ProgressBar from "./bar";
 
 export function MCQs(): JSX.Element {
+    //state variables to store the selected answers
     const [selectedAnswers, setSelectedAnswers] = useState<string[]>(Array(7).fill(''));
+
+    //state variables to store the progress of the MCQs
     const[progress,setProgress] = useState<number>(0);
+
+    //state variables to store the selected options
     const[isSelected1,setIsSelected] = useState<boolean>(false);
     const[isSelected2,setIsSelected2] = useState<boolean>(false);
     const[isSelected3,setIsSelected3] = useState<boolean>(false);
@@ -12,10 +17,12 @@ export function MCQs(): JSX.Element {
     const[isSelected5,setIsSelected5] = useState<boolean>(false);
     const[isSelected6,setIsSelected6] = useState<boolean>(false);
     const[isSelected7,setIsSelected7] = useState<boolean>(false);
-
-    function updateProgress(){
+    
+    
+// functions to update the progress bars
+    function updateProgress1(){
         if(!isSelected1){
-            setProgress(1);
+            setProgress(progress+1);
             setIsSelected(true);
 
         }
@@ -23,45 +30,46 @@ export function MCQs(): JSX.Element {
     }
     function updateProgress2(){
         if(!isSelected2){
-            setProgress(2);
+            setProgress(progress+1);
             setIsSelected2(true);
 
         }
     }
     function updateProgress3(){
         if(!isSelected3){
-            setProgress(3);
+            setProgress(progress+1);
             setIsSelected3(true);
 
         }
     }
     function updateProgress4(){
         if(!isSelected4){
-            setProgress(4);
+            setProgress(progress+1);
             setIsSelected4(true);
 
         }
     }
     function updateProgress5(){
         if(!isSelected5){
-            setProgress(5);
+            setProgress(progress+1);
             setIsSelected5(true);
 
         }
     }
     function updateProgress6(){
         if(!isSelected6){
-            setProgress(6);
+            setProgress(progress+1);
             setIsSelected6(true);
         }
     }
     function updateProgress7(){
         if(!isSelected7){
-            setProgress(7);
+            setProgress(progress+1);
             setIsSelected7(true);
 
         }
     }
+    // function to handle the selection of the answers
     function handleAnswerSelection(index: number, value: string) {
         setSelectedAnswers(prevAnswers => {
             const newAnswers = [...prevAnswers];
@@ -70,7 +78,7 @@ export function MCQs(): JSX.Element {
             return newAnswers;
         });
         if(index === 0){
-            updateProgress();
+            updateProgress1();
         }
         else if(index === 1){
             updateProgress2();
@@ -92,6 +100,8 @@ export function MCQs(): JSX.Element {
         }
     }
 
+    
+//arrays of basic questions in the form of MCQs
     let questions = [
         "What type of work environment do you prefer?",
         "What skill are you most proud of?",
@@ -101,7 +111,7 @@ export function MCQs(): JSX.Element {
         "How do you prefer to learn new skills or information?",
         "What industry or field interests you the most?"
     ];
-
+// options for the MCQs in the form of arrays
     let options = [
         ["Fast-paced and dynamic", "Quiet and structured", "Collaborative and team-oriented", "Independent and self-directed"],
         ["Creativity and innovation", "Analytical thinking and problem-solving", "Communication and interpersonal skills", "Attention to detail and organization"],
@@ -119,6 +129,7 @@ export function MCQs(): JSX.Element {
     }
 
     return (
+        //pprogress bar for the MCQs
         <><div className="Progress-Bar">
             <div className="Progress">{Math.round((progress/7)*100)}% </div>
             <ProgressBar value={progress} maxValue={7} />
