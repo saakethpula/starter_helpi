@@ -135,19 +135,19 @@ FAIL src/App.test.tsx
 ---------------------|---------|----------|---------|---------|-------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------|---------|----------|---------|---------|-------------------
-All files            |    9.09 |    17.39 |    2.56 |    9.09 |                   
+All files            |    8.59 |    16.66 |    2.32 |    8.59 |                   
  src                 |      25 |     37.5 |    9.09 |      25 |                   
   App.tsx            |      36 |       50 |   11.11 |      36 | 12,22-55          
   index.tsx          |       0 |      100 |     100 |       0 | 8-20              
   reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
- src/components      |    2.35 |     6.66 |       0 |    2.35 |                   
+ src/components      |    2.17 |     6.25 |       0 |    2.17 |                   
   ChatGPT.tsx        |      20 |      100 |       0 |      20 | 6-26              
   DetailedQs.tsx     |       0 |      100 |       0 |       0 | 6-55              
-  MCQs.tsx           |       0 |        0 |       0 |       0 | 7-146             
+  MCQs.tsx           |       0 |        0 |       0 |       0 | 7-176             
   bar.tsx            |    12.5 |      100 |       0 |    12.5 | 9-20              
 ---------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.413 s
+Time:        2.516 s
 Ran all test suites.
