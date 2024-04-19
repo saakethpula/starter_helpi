@@ -54,7 +54,7 @@ function App() {
     setPage("Results");
     setResult("Basic Results");
   }
-  
+
   return (
     //displays the logo
     <div className='background'>

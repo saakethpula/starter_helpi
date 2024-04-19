@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import ProgressBar from "./bar";
 
 export function MCQs(): JSX.Element {
@@ -111,32 +111,68 @@ export function MCQs(): JSX.Element {
         ["Experimenting and trying things out on your own", "Reading books or articles", "Participating in workshops or group discussions", "Watching tutorials or receiving hands-on training"],
         ["Technology and innovation", "Finance and business", "Healthcare and social services", "Arts and entertainment"]
     ];
+    let moreQuestions = [["a"], ["b"], ["c"], ["d"], ["e"], ["f"], ["g"]];
+    let moreOptions = [["a"], ["b"], ["c"], ["d"], ["e"], ["f"], ["g"]];
+    const [page, setPage] = useState<string>("");
+    function generateQ(){
+        setPage("moreBasic");
+    }
 
     return (
         <><div className="Progress-Bar">
-            <div className="Progress">{Math.round((progress/7)*100)} % </div>
+            <div className="Progress">{Math.round((progress/7)*100)}% </div>
             <ProgressBar value={progress} maxValue={7} />
         </div>
-        <div className="Center">
-            <Form.Group controlId="MCQs">
-                {questions.map((question, index) => (
-                    <div key={index}>
-                        <Form.Label className="Bold">{`${index + 1}. ${question}`}</Form.Label>
-                        <div className="Space">
-                            {options[index].map((option: string, optionIndex: number) => (
-                                <Form.Check
-                                    key={option}
-                                    type="radio"
-                                    label={option}
-                                    name={`question-${index}`}
-                                    value={option}
-                                    checked={selectedAnswers[index] === option}
-                                    onChange={() => handleAnswerSelection(index, option)} />
-                            ))}
+            <><div className="Center">
+                    <Form.Group controlId="MCQs">
+                        {questions.map((question, index) => (
+                            <div key={index}>
+                                <Form.Label className="Bold">{`${index + 1}. ${question}`}</Form.Label>
+                                <div className="Space">
+                                    {options[index].map((option: string, optionIndex: number) => (
+                                        <Form.Check
+                                            key={option}
+                                            type="radio"
+                                            label={option}
+                                            name={`question-${index}`}
+                                            value={option}
+                                            checked={selectedAnswers[index] === option}
+                                            onChange={() => handleAnswerSelection(index, option)} />
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </Form.Group>
+        
+
+            <div>
+                {page === 'moreBasic' && (
+                    <> 
+                    <div className="Center">
+                <Form.Group controlId="MCQs">
+                    {moreQuestions.map((question, index) => (
+                        <div key={index}>
+                            <Form.Label className="Bold">{`${index + 1}. ${question}`}</Form.Label>
+                            <div className="Space">
+                                {moreOptions[index].map((option: string, optionIndex: number) => (
+                                    <Form.Check
+                                        key={option}
+                                        type="radio"
+                                        label={option}
+                                        name={`question-${index}`}
+                                        value={option}
+                                        checked={selectedAnswers[index] === option}
+                                        onChange={() => handleAnswerSelection(index, option)} />
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </Form.Group>
-        </div></>
+                    ))}
+                </Form.Group>
+            </div>
+                    </>
+                    )}
+            </div>
+            </div><Button className="Submit-Button" variant="primary" onClick={generateQ}>Generate more questions</Button></>
+</>
     );
 }
