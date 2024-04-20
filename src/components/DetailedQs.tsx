@@ -4,7 +4,7 @@ import ProgressBar from './bar';
 
 export function DetailedQs(): JSX.Element {
     const [index,setIndex] = useState<number>(0);
-    const [detailedAnswers, setDetailedAnswers] = useState<string[]>(["","","","","","",""]);
+    const [detailedAnswers, setDetailedAnswers] = useState<string[]>(["","","","","","",""]); // Initialize the state with an array of 7 empty strings
     function addAnswer(answer: React.ChangeEvent<HTMLInputElement>){
         setDetailedAnswers(prevDetailedAnswers => {
           const newDetailedAnswers = [...prevDetailedAnswers]; // Make a copy of the previous state
@@ -12,15 +12,17 @@ export function DetailedQs(): JSX.Element {
           return newDetailedAnswers; // Return the new state
         });
       }
-      function updateIndex(qindex: number){
-        setIndex(qindex);
-        console.log("Index Updated");
-        console.log(detailedAnswers);
-      }
+    function updateIndex(qindex: number){ // Update the index when the user clicks on a question
+      setIndex(qindex);
+      console.log("Index Updated");
+      console.log(detailedAnswers);
+    }
 
-    return (
+    return ( // Return the JSX for the Detailed Questions
         <div className="Detail">
+          <div className="Progress">{Math.round((index/6)*100)} % </div>
           <div className='Space'><ProgressBar value={index} maxValue={6}/></div>
+          <div className='standardQsDetailed'>
           <Form>
             <Form.Label className = "Bold">Consider the role of failure in career growth. How do you approach setbacks and challenges, and what strategies do you employ to bounce back and persevere?</Form.Label>
             <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(0)}></Form.Control>            <br></br>
@@ -55,6 +57,10 @@ export function DetailedQs(): JSX.Element {
             <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(6)}></Form.Control>            <br></br>
             <br></br>
           </Form>
+          </div>
+          <div className="firstAddedDetailed">
+            
+          </div>
         </div>
     )
 }
