@@ -17,9 +17,9 @@ export async function generateDetailed(detailedAnswers: string[]) {
     model: "gpt-4-0125-preview",
     messages: [
       { role: 'system', content: 'You are a Career Assessment quiz results generator' },
-      { role: 'user', content: `Give me a list of careers using these answers: ${detailedAnswers.join(', ')} to these Questions: ${questions.join(', ')}. Just give me the name of 3 options. No extra info is needed. Number them. Also put them in this form JOBNAMEHERE: indeed.com/q-JOBNAMEHERE-jobs.html. Separate the words with hyphens not spaces and put it in the JOBNAMEHERE spot.` }
+      { role: 'user', content: `Give me a list of careers using these answers: ${detailedAnswers} to these Questions: ${questions}. Just give me the name of 3 options. No extra info is needed. Number them. Also put them in this form JOBNAMEHERE: indeed.com/q-JOBNAMEHERE-jobs.html. Separate the words with hyphens not spaces and put it in the JOBNAMEHERE spot.` }
     ],
-    temperature: 0.5,
+    temperature: 1.5,
   });
 
   const result = completion.choices[0].message.content;
@@ -40,9 +40,9 @@ export async function generateBasic(basicAnswers: string[]) {
     model: "gpt-4-0125-preview",
     messages: [
       { role: 'system', content: 'You are a Career Assessment quiz results generator' },
-      { role: 'user', content: `Give me a list of careers using these answers: ${basicAnswers.join(', ')} to these Questions: ${questions.join(', ')}. Just give me the name of 3 options. No extra info is needed. Number them. Also put them in this form: job name: indeed.com/q-JOBLINK-jobs.html. The job name should be just the name of the job. JOBLINK should have separated words with hyphens not spaces and put it in the JOBNAMEHERE spot. Before each new number separate with a newline indicator` }
+      { role: 'user', content: `Give me a list of careers using these answers: ${basicAnswers} to these Questions: ${questions}. Really pay attention to the last question. It should give you some extra insight into what type of jobs the user is looking for. Just give me the name of 3 options. The options should be sort of specific. No extra info is needed. Number them. Also put them in this form: job name: indeed.com/q-JOBLINK-jobs.html. The job name should be just the name of the job. JOBLINK should have separated words with hyphens not spaces and put it in the JOBNAMEHERE spot. Before each new number separate with a newline indicator` }
     ],
-    temperature: 0.5,
+    temperature: 1.5,
   });
 
   const result = completion.choices[0].message.content;

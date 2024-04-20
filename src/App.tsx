@@ -63,9 +63,11 @@ function App() {
   return (
     //displays the logo
     <div className='background'>
+      <div className = "diffHeader">
         <Button className="homeButton" variant= "primary" onClick={changePageHome} >Home</Button>
         <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
-      {page === 'Basic' && (
+      </div>
+        {page === 'Basic' && (
         <div className="Basic">
         <MCQs></MCQs><Button className="Submit-Button" variant="primary" onClick={changePageResultsB}>Submit</Button>
         </div>
@@ -108,7 +110,7 @@ function App() {
         <footer className="Home-footer">
       These quizzes should not be used as the sole decision when considering a career
         </footer>
-      <Form>
+      <Form className = "API-Key">
           <Form.Label>API Key:</Form.Label>
           <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
           <br></br>
