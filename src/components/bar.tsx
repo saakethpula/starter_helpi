@@ -19,8 +19,9 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ value, maxValue }) => {
 
     return (
         <div>
-            <div style={{ backgroundColor: '#f0f0f0', height: '20px', marginBottom: '-20px'}}></div>
-            <div style={{ width: `${progress}%`, height: '20px', backgroundColor: 'rgb(12, 128, 173)' }}></div>
+            
+            <div style={{backgroundColor: '#f0f0f0', height: '20px', marginBottom: '-20px'}}></div>
+            <div style={{width: `${progress}%`, height: '20px', backgroundColor: 'rgb(12, 128, 173)'}}></div>
         </div>
     );
 };

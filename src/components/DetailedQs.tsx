@@ -95,7 +95,7 @@ export function DetailedQs(): JSX.Element {
             )}
           </div>
           <div>
-            <Button className="Submit-Button" variant="primary" onClick={generateQ} disabled={click}>Generate more questions</Button>
+          <Button className="Submit-Button" variant="primary" onClick={generateQ} disabled={click}>Generate more questions</Button>
           </div>
         </div>
     )
