@@ -14,15 +14,15 @@ export async function generateDetailed(detailedAnswers: string[]) {
   ];
 
   const completion = await openai.chat.completions.create({ // Generate the completion for the detailed questions
-    model: "gpt-4-0125-preview",
+    model: "gpt-4-turbo",
     messages: [
       { role: 'system', content: 'You are a Career Assessment quiz results generator' },
-      { role: 'user', content: `Give me a list of careers using these answers: ${detailedAnswers} to these Questions: ${questions}. Just give me the name of 3 options. No extra info is needed. Number them. Also put them in this form JOBNAMEHERE: indeed.com/q-JOBNAMEHERE-jobs.html. Separate the words with hyphens not spaces and put it in the JOBNAMEHERE spot.` }
+      { role: 'user', content: `Give me a list of careers using these answers: ${detailedAnswers} to these Questions: ${questions}. The first question uses the first answer, the second question uses the second answer and so on. Just give me the name of 3 options. No extra info is needed. Number them. Also put them in this form: job name: indeed.com/q-JOBLINK-jobs.html. The job name should be just the name of the job. JOBLINK should have separated words with hyphens not spaces and put it in the JOBNAMEHERE spot. Split up the jobs by a comma so that I can turn the string into an array. Please only say what the jobs are don't give any extra info or say anything else about the prompt. I want only the career and the link.` }
     ],
     temperature: 1.5,
   });
 
-  const result = completion.choices[0].message.content;
+  const result = completion.choices[0].message.content?.split(",");
   return result;
 }
 export async function generateBasic(basicAnswers: string[]) {
@@ -37,15 +37,15 @@ export async function generateBasic(basicAnswers: string[]) {
 ];
 
   const completion = await openai.chat.completions.create({ // Generate the completion for the basic questions
-    model: "gpt-4-0125-preview",
+    model: "gpt-4-turbo",
     messages: [
       { role: 'system', content: 'You are a Career Assessment quiz results generator' },
-      { role: 'user', content: `Give me a list of careers using these answers: ${basicAnswers} to these Questions: ${questions}. Really pay attention to the last question. It should give you some extra insight into what type of jobs the user is looking for. Just give me the name of 3 options. The options should be sort of specific. No extra info is needed. Number them. Also put them in this form: job name: indeed.com/q-JOBLINK-jobs.html. The job name should be just the name of the job. JOBLINK should have separated words with hyphens not spaces and put it in the JOBNAMEHERE spot. Before each new number separate with a newline indicator` }
+      { role: 'user', content: `Give me a list of careers using these answers: ${basicAnswers} to these Questions: ${questions}. The first question uses the first answer, the second question uses the second answer and so on. Just give me the name of 3 options. No extra info is needed. Number them. Also put them in this form: job name: indeed.com/q-JOBLINK-jobs.html. The job name should be just the name of the job. JOBLINK should have separated words with hyphens not spaces and put it in the JOBNAMEHERE spot. Split up the jobs by a comma so that I can turn the string into an array. Please only say what the jobs are don't give any extra info or say anything else about the prompt. I want only the career and the link.` }
     ],
     temperature: 1.5,
   });
 
-  const result = completion.choices[0].message.content;
+  const result = completion.choices[0].message.content?.split(",");
   return result;
 }
 

@@ -196,9 +196,13 @@
 }
 .chatResults {
   align-items: center;
-  margin-bottom: 33%;
+}
+.chatResultsfinal {
+  align-items: center;
+  margin-bottom: 30%;
 }
 .API-Key{
+  
   margin-left: 5%;
   margin-right: 5%;
 }
