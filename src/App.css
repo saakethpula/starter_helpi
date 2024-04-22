@@ -82,7 +82,7 @@
 }
 
 .Description {
-  margin-top: -23%;
+  margin-top: -20%;
   font-size: 140%;
   color: rgb(17, 2, 2);
   margin-bottom: 10%;
@@ -196,9 +196,13 @@
 }
 .chatResults {
   align-items: center;
-  margin-bottom: 33%;
+}
+.chatResultsfinal {
+  align-items: center;
+  margin-bottom: 30%;
 }
 .API-Key{
+  
   margin-left: 5%;
   margin-right: 5%;
 }

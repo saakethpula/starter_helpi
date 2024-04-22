@@ -13,7 +13,7 @@ if (prevKey !== null) {
 }
 
 function App() {
-  const [result, setResult] = useState<string>("Loading Results...");
+  const [result, setResult] = useState<string[]>(["Loading Results..."]);
   const [detailedAnswers] = useState<string[]>(["","","","","","",""]); 
   const [basicAnswers] = useState<string[]>(["","","","","","",""]); // Initialize the state with an array of 7 empty strings
   const [key, setKey] = useState<string>(keyData); //for api key input
@@ -44,19 +44,19 @@ function App() {
   }
   //changes the page to the page where the results of the detailed quiz are displayed
   async function changePageResultsD() {
-    setResult("Loading Results...")
+    setResult(["Loading Results..."])
     setPage("Results");
     generateDetailed(detailedAnswers).then(resolvedValue => {
-      setResult(resolvedValue || ""); // Provide a default value for setResult
+      setResult(resolvedValue || ["","",""]); // Provide a default value for setResult
     });
     console.log(result);
   }
   //changes the page to the page where the results of the basic quiz are displayed
   function changePageResultsB() {
-    setResult("Loading Results...")
+    setResult(["Loading Results..."])
     setPage("Results");
     generateBasic(basicAnswers).then(resolvedValue => {
-      setResult(resolvedValue || ""); // Provide a default value for setResult
+      setResult(resolvedValue || ["","",""]); // Provide a default value for setResult
     });
   }
 
@@ -81,7 +81,9 @@ function App() {
 
       {page === 'Results' && (
         <div className="Results">
-          <p className='chatResults'> {result} </p>
+          <p className='chatResults'> {result[0]} </p>
+          <p className='chatResults'> {result[1]} </p>
+          <p className='chatResultsfinal'> {result[2]} </p>
         </div>
       )}
       {page === 'Home' && (
