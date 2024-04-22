@@ -18,10 +18,12 @@ export function DetailedQs(): JSX.Element {
         console.log(detailedAnswers);
       }
       const [page, setPage] = useState<string>("");
+      const [click, setClick] = useState<boolean>(false);
     function generateQ(){
         setPage("moreDetails");
+        setClick(true);  
     }
-
+    
     return (
         <div className="Detail">
            <div className="Progress">{Math.round((index/6)*100)} % </div>
@@ -93,7 +95,7 @@ export function DetailedQs(): JSX.Element {
             )}
           </div>
           <div>
-            <Button className="Submit-Button" variant="primary" onClick={generateQ}>Generate more questions</Button>
+            <Button className="Submit-Button" variant="primary" onClick={generateQ} disabled={click}>Generate more questions</Button>
           </div>
         </div>
     )
