@@ -24,6 +24,7 @@ export function DetailedQs(): JSX.Element {
 
     return (
         <div className="Detail">
+           <div className="Progress">{Math.round((index/6)*100)} % </div>
           <div className='Space'><ProgressBar value={index} maxValue={6}/></div>
           <Form>
             <Form.Label className = "Bold">Consider the role of failure in career growth. How do you approach setbacks and challenges, and what strategies do you employ to bounce back and persevere?</Form.Label>
