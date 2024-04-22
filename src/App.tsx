@@ -22,6 +22,7 @@ function App() {
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
     window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
+    setPage("Home");
   }
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
@@ -69,7 +70,8 @@ function App() {
       </div>
         {page === 'Basic' && (
         <div className="Basic">
-        <MCQs></MCQs><Button className="Submit-Button" variant="secondary" onClick={changePageResultsB}>Submit</Button>
+        <MCQs></MCQs>
+        <Button className="Submit-Button" variant="secondary" onClick={changePageResultsB}>Submit</Button>
         </div>
       )}
       {page === 'Detail' && (
@@ -78,7 +80,6 @@ function App() {
           <Button className="Submit-Button" variant = "secondary" onClick = {changePageResultsD}>Submit</Button>
         </div>
       )}
-
       {page === 'Results' && (
         <div className="Results">
           <p className='chatResults'> {result[0]} </p>
@@ -112,12 +113,14 @@ function App() {
         <footer className="Home-footer">
       These quizzes should not be used as the sole decision when considering a career
         </footer>
-      <Form className = "API-Key">
+        <div className="API">
+          <Form className = "API-Key">
           <Form.Label>API Key:</Form.Label>
           <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
           <br></br>
           <Button variant = "secondary" onClick={handleSubmit}>Submit</Button>
       </Form>
+          </div>
     </div>
   );
 }

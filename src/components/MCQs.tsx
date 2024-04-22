@@ -183,7 +183,8 @@ export function MCQs(): JSX.Element {
                     </>
                     )}
             </div>
-            </div><Button className="Submit-Button" variant="primary" onClick={generateQ}>Generate more questions</Button></>
+        </div>
+    <Button className="Submit-Button" variant="primary" onClick={generateQ}>Generate more questions</Button></>
 </>
     );
 }

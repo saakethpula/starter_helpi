@@ -19,7 +19,7 @@ export async function generateDetailed(detailedAnswers: string[]) {
       { role: 'system', content: 'You are a Career Assessment quiz results generator' },
       { role: 'user', content: `Give me a list of careers using these answers: ${detailedAnswers} to these Questions: ${questions}. The first question uses the first answer, the second question uses the second answer and so on. Just give me the name of 3 options. No extra info is needed. Number them. Also put them in this form: job name: indeed.com/q-JOBLINK-jobs.html. The job name should be just the name of the job. JOBLINK should have separated words with hyphens not spaces and put it in the JOBNAMEHERE spot. Split up the jobs by a comma so that I can turn the string into an array. Please only say what the jobs are don't give any extra info or say anything else about the prompt. I want only the career and the link.` }
     ],
-    temperature: 1.5,
+    temperature: .75,
   });
 
   const result = completion.choices[0].message.content?.split(",");
@@ -40,9 +40,9 @@ export async function generateBasic(basicAnswers: string[]) {
     model: "gpt-4-turbo",
     messages: [
       { role: 'system', content: 'You are a Career Assessment quiz results generator' },
-      { role: 'user', content: `Give me a list of careers using these answers: ${basicAnswers} to these Questions: ${questions}. The first question uses the first answer, the second question uses the second answer and so on. Just give me the name of 3 options. No extra info is needed. Number them. Also put them in this form: job name: indeed.com/q-JOBLINK-jobs.html. The job name should be just the name of the job. JOBLINK should have separated words with hyphens not spaces and put it in the JOBNAMEHERE spot. Split up the jobs by a comma so that I can turn the string into an array. Please only say what the jobs are don't give any extra info or say anything else about the prompt. I want only the career and the link.` }
+      { role: 'user', content: `Give me a list of careers using these answers: ${basicAnswers} to these Questions: ${questions}. The first question uses the first answer, the second question uses the second answer and so on. The last question and answer should be the style of jobs the person is looking for. Just give me the name of 3 options. No extra info is needed. Number them. Also put them in this form: job name: indeed.com/q-JOBLINK-jobs.html. The job name should be just the name of the job. JOBLINK should have separated words with hyphens not spaces and put it in the JOBNAMEHERE spot. Split up the jobs by a comma so that I can turn the string into an array. Please only say what the jobs are don't give any extra info or say anything else about the prompt. I want only the career and the link.` }
     ],
-    temperature: 1.5,
+    temperature: .75,
   });
 
   const result = completion.choices[0].message.content?.split(",");
