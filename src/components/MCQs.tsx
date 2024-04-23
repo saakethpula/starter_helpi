@@ -124,8 +124,10 @@ export function MCQs(): JSX.Element {
     let moreQuestions = [["a"], ["b"], ["c"], ["d"], ["e"], ["f"], ["g"]];
     let moreOptions = [["a"], ["b"], ["c"], ["d"], ["e"], ["f"], ["g"]];
     const [page, setPage] = useState<string>("");
+    const [click, setClick] = useState<boolean>(false);
     function generateQ(){
         setPage("moreBasic");
+        setClick(true); 
     }
 
     return (
@@ -184,7 +186,7 @@ export function MCQs(): JSX.Element {
                     )}
             </div>
         </div>
-    <Button className="Submit-Button" variant="primary" onClick={generateQ}>Generate more questions</Button></>
+    <Button className="Submit-Button" variant="primary" onClick={generateQ} disabled={click}>Generate more questions</Button></>
 </>
     );
 }
