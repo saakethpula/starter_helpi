@@ -25,46 +25,46 @@ export function DetailedQs(): JSX.Element {
     }
     
     return (
-        <div className="Detail">
-           <div className="Progress">{Math.round((index/6)*100)} % </div>
-          <div className='Space'><ProgressBar value={index} maxValue={6}/></div>
-          <Form>
-            <Form.Label className = "Bold">Consider the role of failure in career growth. How do you approach setbacks and challenges, and what strategies do you employ to bounce back and persevere?</Form.Label>
-            <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(0)}></Form.Control>            <br></br>
-          </Form>
-          <Form>
-            <Form.Label className = "Bold">Reflect on the impact you want to have on your community or society through your career. </Form.Label>
-            <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(1)}></Form.Control>            <br></br>
-            <br></br>
-          </Form>
-          <Form>
-            <Form.Label className = "Bold">Reflect on a moment in your life when you felt completely immersed and engaged in what you were doing. What were you doing, and how can you incorporate similar elements into your future career?</Form.Label>
-            <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(2)}></Form.Control>            <br></br>
-            <br></br>
-          </Form>
-          <Form>
-            <Form.Label className = "Bold">Consider the lifestyle you envision for yourself in the future. How does your ideal work-life balance look, and which career paths align with your desired lifestyle?</Form.Label>
-            <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(3)}></Form.Control>            <br></br>
-            <br></br>
-          </Form>
-          <Form>
-            <Form.Label className = "Bold">Consider the future of work and emerging industries. Which trends or technologies do you find most exciting, and how could you position yourself to capitalize on these opportunities?</Form.Label>
-            <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(4)}></Form.Control>            <br></br>
-            <br></br>
-          </Form>
-          <Form>
-            <Form.Label className = "Bold">Reflect on a moment when you felt deeply fulfilled and energized by your work, regardless of whether it was a paid job or a volunteer opportunity. What aspects of that experience can you identify as key drivers for your career satisfaction?</Form.Label>
-            <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(5)}></Form.Control>            <br></br>
-            <br></br>
-          </Form>
-          <Form>
-            <Form.Label className = "Bold">Reflect on your preferred work style and environment. Are you more drawn to structured routines, flexibility, or a mix of both?</Form.Label>
-            <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(6)}></Form.Control>            <br></br>
-            <br></br>
-          </Form>
-          <div>
-            {page === 'moreDetails' &&(
-               <><Form>
+        <><div className="Detail">
+        <div className="Progress">{Math.round((index / 6) * 100)} % </div>
+        <div className='Space'><ProgressBar value={index} maxValue={6} /></div>
+        <Form>
+          <Form.Label className="Bold">Consider the role of failure in career growth. How do you approach setbacks and challenges, and what strategies do you employ to bounce back and persevere?</Form.Label>
+          <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(0)}></Form.Control>            <br></br>
+        </Form>
+        <Form>
+          <Form.Label className="Bold">Reflect on the impact you want to have on your community or society through your career. </Form.Label>
+          <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(1)}></Form.Control>            <br></br>
+          <br></br>
+        </Form>
+        <Form>
+          <Form.Label className="Bold">Reflect on a moment in your life when you felt completely immersed and engaged in what you were doing. What were you doing, and how can you incorporate similar elements into your future career?</Form.Label>
+          <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(2)}></Form.Control>            <br></br>
+          <br></br>
+        </Form>
+        <Form>
+          <Form.Label className="Bold">Consider the lifestyle you envision for yourself in the future. How does your ideal work-life balance look, and which career paths align with your desired lifestyle?</Form.Label>
+          <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(3)}></Form.Control>            <br></br>
+          <br></br>
+        </Form>
+        <Form>
+          <Form.Label className="Bold">Consider the future of work and emerging industries. Which trends or technologies do you find most exciting, and how could you position yourself to capitalize on these opportunities?</Form.Label>
+          <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(4)}></Form.Control>            <br></br>
+          <br></br>
+        </Form>
+        <Form>
+          <Form.Label className="Bold">Reflect on a moment when you felt deeply fulfilled and energized by your work, regardless of whether it was a paid job or a volunteer opportunity. What aspects of that experience can you identify as key drivers for your career satisfaction?</Form.Label>
+          <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(5)}></Form.Control>            <br></br>
+          <br></br>
+        </Form>
+        <Form>
+          <Form.Label className="Bold">Reflect on your preferred work style and environment. Are you more drawn to structured routines, flexibility, or a mix of both?</Form.Label>
+          <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(6)}></Form.Control>            <br></br>
+          <br></br>
+        </Form>
+        <div>
+          {page === 'moreDetails' && (
+            <><Form>
               <Form.Label className="Bold">Consider the role of failure in career growth. How do you approach setbacks and challenges, and what strategies do you employ to bounce back and persevere?</Form.Label>
               <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(7)}></Form.Control>            <br></br>
             </Form><Form>
@@ -92,11 +92,9 @@ export function DetailedQs(): JSX.Element {
                 <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(13)}></Form.Control>            <br></br>
                 <br></br>
               </Form></>
-            )}
-          </div>
-          <div>
-          <Button className="Submit-Button" variant="primary" onClick={generateQ} disabled={click}>Generate more questions</Button>
-          </div>
+          )}
         </div>
+      </div><Button className="Submit-Button" variant="primary" onClick={generateQ} disabled={click}>Generate more questions</Button></>
+
     )
 }
