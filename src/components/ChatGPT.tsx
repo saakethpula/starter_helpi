@@ -22,8 +22,13 @@ export async function generateDetailed(detailedAnswers: string[]) {
     temperature: .75,
   });
 
-  const result = completion.choices[0].message.content?.split(",");
-  return result;
+
+  const result = completion.choices[0].message.content?.split(",") ?? [];
+  const result1 = result[0].split(":");
+  const result2 = result[1].split(":");
+  const result3= result[2].split(":");
+
+  return [result1[0], result1[1], result2[0], result2[1], result3[0], result3[1]];
 }
 export async function generateBasic(basicAnswers: string[]) {
   let questions = [ // Array of basic questions to be asked
@@ -45,7 +50,12 @@ export async function generateBasic(basicAnswers: string[]) {
     temperature: .75,
   });
 
-  const result = completion.choices[0].message.content?.split(",");
-  return result;
+  const result = completion.choices[0].message.content?.split(",") ?? [];
+  const result1 = result[0].split(":");
+  const result2 = result[1].split(":");
+  const result3= result[2].split(":");
+
+
+  return [result1[0], result1[1], result2[0], result2[1], result3[0], result3[1]];
 }
 
