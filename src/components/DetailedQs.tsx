@@ -4,7 +4,7 @@ import ProgressBar from './bar';
 
 export function DetailedQs(): JSX.Element {
     const [index,setIndex] = useState<number>(0);
-    const [detailedAnswers, setDetailedAnswers] = useState<string[]>(["","","","","","",""]);
+    const [detailedAnswers, setDetailedAnswers] = useState<string[]>(["","","","","","","","","","","","","",""]);
     function addAnswer(answer: React.ChangeEvent<HTMLInputElement>){
         setDetailedAnswers(prevDetailedAnswers => {
           const newDetailedAnswers = [...prevDetailedAnswers]; // Make a copy of the previous state
@@ -13,21 +13,25 @@ export function DetailedQs(): JSX.Element {
         });
       }
       function updateIndex(qindex: number){
-        setIndex(qindex);
-        console.log("Index Updated");
-        console.log(detailedAnswers);
+        if (qindex >= index) {
+          setIndex(qindex);
+          console.log("Index Updated");
+          console.log(detailedAnswers)
+        }
       }
       const [page, setPage] = useState<string>("");
       const [click, setClick] = useState<boolean>(false);
+      const [amount,setAmount] = useState<number>(6);
     function generateQ(){
         setPage("moreDetails");
-        setClick(true);  
+        setClick(true);
+        setAmount(13);
     }
     
     return (
         <><div className="Detail">
-        <div className="Progress">{Math.round((index / 6) * 100)} % </div>
-        <div className='Space'><ProgressBar value={index} maxValue={6} /></div>
+        <div className="Progress">{Math.round((index / amount) * 100)} % </div>
+        <div className='Space'><ProgressBar value={index} maxValue={amount} /></div>
         <Form>
           <Form.Label className="Bold">Consider the role of failure in career growth. How do you approach setbacks and challenges, and what strategies do you employ to bounce back and persevere?</Form.Label>
           <Form.Control placeholder="Answer" onChange={addAnswer} onClick={() => updateIndex(0)}></Form.Control>            <br></br>
