@@ -84,19 +84,19 @@ function App() {
         <div className="Results">
           <p className='chatResults'> {result[0]} </p>
           <p className='chatResults'> 
-            <a href= {"https://" + (result[1] ? result[1].replace(/\s/g, '') : '')} >
+            <a href=  {"https://" + (result[1] ? result[1].replace(/\s/g, '') : '' )} target="_blank" rel="noreferrer" >
             {result[1]}
             </a> 
           </p>          
           <p className='chatResults'> {result[2]} </p>
           <p className='chatResults'> 
-            <a href= {"https://" + (result[3] ? result[3].replace(/\s/g, '') : '')} >
+            <a href= {"https://" + (result[3] ? result[3].replace(/\s/g, '') : '') } target="_blank" rel="noreferrer" >
             {result[3]}
             </a> 
           </p>          
           <p className='chatResults'> {result[4]} </p>
           <p className='chatResultsfinal'> 
-            <a href= {"https://" + (result[5] ? result[5].replace(/\s/g, '') : '')} >
+            <a href= {"https://" + (result[5] ? result[5].replace(/\s/g, '') : '')} target="_blank" rel="noreferrer">
             {result[5]}
             </a> 
           </p>
