@@ -60,6 +60,7 @@ function App() {
       setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
     });
   }
+  
 
   return (
     //displays the logo
