@@ -46,6 +46,9 @@ function App() {
   //changes the page to the page where the results of the detailed quiz are displayed
   async function changePageResultsD() {
     setResult(["Loading Results..."])
+    if (keyData === ""){
+      setResult(["Please enter an API Key"]);
+    }
     setPage("Results");
     generateDetailed(detailedAnswers).then(resolvedValue => {
       setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
@@ -55,6 +58,9 @@ function App() {
   //changes the page to the page where the results of the basic quiz are displayed
   function changePageResultsB() {
     setResult(["Loading Results..."])
+    if (keyData === ""){
+      setResult(["Please enter an API Key"]);
+    }
     setPage("Results");
     generateBasic(basicAnswers).then(resolvedValue => {
       setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
