@@ -24,6 +24,13 @@ export async function generateDetailed(detailedAnswers: string[]) {
 
 
   const result = completion.choices[0].message.content?.split(",") ?? [];
+  if (result === undefined) {
+    generateBasic(detailedAnswers);
+  }
+  if (result[0].length > 200) {
+    console.log("Error");
+    generateBasic(detailedAnswers);
+  }
   const result1 = result[0].split(":");
   const result2 = result[1].split(":");
   const result3= result[2].split(":");
@@ -51,6 +58,13 @@ export async function generateBasic(basicAnswers: string[]) {
   });
 
   const result = completion.choices[0].message.content?.split(",") ?? [];
+  if (result === undefined) {
+    generateBasic(basicAnswers);
+  }
+  if (result[0].length > 200) {
+    console.log("Error");
+    generateBasic(basicAnswers);
+  }
   const result1 = result[0].split(":");
   const result2 = result[1].split(":");
   const result3= result[2].split(":");
