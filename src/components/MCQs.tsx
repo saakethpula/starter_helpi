@@ -25,7 +25,6 @@ export function MCQs(): JSX.Element {
     const[isSelected13,setIsSelected13] = useState<boolean>(false);
     const[isSelected14,setIsSelected14] = useState<boolean>(false);
     
-    
 // functions to update the progress bars
     function updateProgress1(){
         if(!isSelected1){
@@ -191,7 +190,7 @@ export function MCQs(): JSX.Element {
         "How do you prefer to learn new skills or information?",
         "What industry or field interests you the most?"
     ];
-// options for the MCQs in the form of arraysn
+// options for the MCQs in the form of arrays
     let options = [
         ["Fast-paced and dynamic", "Quiet and structured", "Collaborative and team-oriented", "Independent and self-directed"],
         ["Creativity and innovation", "Analytical thinking and problem-solving", "Communication and interpersonal skills", "Attention to detail and organization"],
@@ -201,8 +200,8 @@ export function MCQs(): JSX.Element {
         ["Experimenting and trying things out on your own", "Reading books or articles", "Participating in workshops or group discussions", "Watching tutorials or receiving hands-on training"],
         ["Technology and innovation", "Finance and business", "Healthcare and social services", "Arts and entertainment"]
     ];
-    let moreQuestions = [["a"], ["b"], ["c"], ["d"], ["e"], ["f"], ["g"]];
-    let moreOptions = [["a"], ["b"], ["c"], ["d"], ["e"], ["f"], ["g"]];
+    let moreQuestions = [["What role do you usually play in group projects or teams?"], ["What type of work schedule would you prefer"], ["What type of tasks do you enjoy the most?"], ["What do you value most in a company culture?"], ["What's your preferred level of interaction with clients or customers?"], ["How important is work-life balance to you?"], ["What's your approach to problem-solving?"]];
+    let moreOptions = [["The leader who sets direction and delegates tasks", "The meticulous organizer who ensures everything runs smoothly", "The creative thinker who generates new ideas", "The team player who supports and motivates others"], ["Standard 9 to 5 schedule", "Flexible hours or remote work options", "Irregular hours with breaks in between", "Part-time or freelance work"], ["Problem-solving and analysis", "Routine tasks with clear instructions", "Collaborative projects with a team", "Innovative and experimental projects"], ["A supportive and inclusive environment", "A competitive and results-driven atmosphere", "A creative and innovative culture", "A stable and structured organization"], ["I enjoy building relationships with clients and understanding their needs", "I prefer to focus on delivering results without direct client interaction", "I thrive on providing excellent customer service and building rapport", "I prefer to leave client interactions to sales or customer service teams"], ["It's essential for my well-being", "It's important, but not a deal-breaker", "It's not a priority for me", "I prefer to fully immerse myself in work"], ["I break down the problem into smaller parts and analyze each one systematically", "I brainstorm solutions with a group to gather diverse perspectives", "I try different approaches until I find one that works", "I seek advice from experts or mentors to guide my problem-solving process"]];
     const [page, setPage] = useState<string>("");
     const [click, setClick] = useState<boolean>(false);
     const [moreBasic, setMoreBasic] = useState<boolean>(false);
