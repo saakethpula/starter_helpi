@@ -70,31 +70,7 @@ export function DetailedQs(): JSX.Element {
         <div>
           {page === 'moreDetails' && (
             <><Form>
-              <Form.Label className="Bold">Consider the future of education and skill development. How do you stay ahead of the curve by continuously upskilling and reskilling to adapt to emerging trends in your industry?</Form.Label>
-              <Form.Control placeholder="Answer" disabled = {detailedAnswers[6] === ""} onChange={addAnswer} onClick={() => updateIndex(7)}></Form.Control>            <br></br>
-            </Form><Form>
-                <Form.Label className="Bold">In what ways do you incorporate mindfulness and wellness practices into your daily work routine to foster resilience and prevent burnout?</Form.Label>
-                <Form.Control placeholder="Answer" disabled = {detailedAnswers[7] === ""} onChange={addAnswer} onClick={() => updateIndex(8)}></Form.Control>            <br></br>
-                <br></br>
               </Form><Form>
-                <Form.Label className="Bold">Reflect on your approach to risk-taking in your career. How do you balance the desire for stability with the willingness to embrace uncertainty and pursue opportunities with potential for growth?</Form.Label>
-                <Form.Control placeholder="Answer" disabled = {detailedAnswers[8] === ""} onChange={addAnswer} onClick={() => updateIndex(9)}></Form.Control>            <br></br>
-                <br></br>
-              </Form><Form>
-                <Form.Label className="Bold">What activities or subjects have consistently captured your interest and curiosity throughout your life?</Form.Label>
-                <Form.Control placeholder="Answer" disabled = {detailedAnswers[9] === ""} onChange={addAnswer} onClick={() => updateIndex(10)}></Form.Control>            <br></br>
-                <br></br>
-              </Form><Form>
-                <Form.Label className="Bold">Consider the financial aspects of different career paths. What level of income and financial stability are you comfortable with, and how do different career options align with these financial goals?</Form.Label>
-                <Form.Control placeholder="Answer" disabled = {detailedAnswers[10] === ""} onChange={addAnswer} onClick={() => updateIndex(11)}></Form.Control>            <br></br>
-                <br></br>
-              </Form><Form>
-                <Form.Label className="Bold">Consider your role models or inspirational figures. What qualities or achievements do they possess that resonate with you, and how might you incorporate these elements into your career trajectory?</Form.Label>
-                <Form.Control placeholder="Answer" disabled = {detailedAnswers[11] === ""} onChange={addAnswer} onClick={() => updateIndex(12)}></Form.Control>            <br></br>
-                <br></br>
-              </Form><Form>
-                <Form.Label className="Bold">How might your preferred climate and geographic location influence your career decisions? Are you drawn to urban, rural, coastal, or mountainous environments, and how can you align your career goals with locations that match your preferences?</Form.Label>
-                <Form.Control placeholder="Answer" disabled = {detailedAnswers[12] === ""} onChange={addAnswer} onClick={() => updateIndex(13)}></Form.Control>            <br></br>
               <Form.Label className="Bold">Consider the role of failure in career growth. How do you approach setbacks and challenges, and what strategies do you employ to bounce back and persevere?</Form.Label>
               <Form.Control placeholder="Answer"  onChange={addAnswer} onClick={() => updateIndex(7)}></Form.Control>            <br></br>
             </Form><Form>
