@@ -22,7 +22,6 @@ export async function generateDetailed(detailedAnswers: string[]) {
     temperature: .75,
   });
 
-
   const result = completion.choices[0].message.content?.split(",") ?? [];
   if (result === undefined) {
     generateBasic(detailedAnswers);

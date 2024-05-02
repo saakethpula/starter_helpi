@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import {MCQs} from './components/MCQs';
-import { generateDetailed,generateBasic } from './components/ChatGPT';
+import { generateDetailed,generateBasic, checkKey } from './components/ChatGPT';
 import {DetailedQs} from './components/DetailedQs';
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -37,18 +37,24 @@ function App() {
   function changePageBasic() {
     setPage("Basic");
     console.log("changed")
+    if (keyData === ""){
+      setPage("Results");
+      setResult(["Please enter an API Key"]);
+    }
   }
   //changes the page to the detailed questions page
   function changePageDetail() {
     setPage("Detail");
     console.log("changed")
+    setResult(["Loading Results..."])
+    if (keyData === ""){
+      setPage("Results");
+      setResult(["Please enter an API Key"]);
+    }
   }
   //changes the page to the page where the results of the detailed quiz are displayed
   async function changePageResultsD() {
     setResult(["Loading Results..."])
-    if (keyData === ""){
-      setResult(["Please enter an API Key"]);
-    }
     setPage("Results");
     generateDetailed(detailedAnswers).then(resolvedValue => {
       setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
@@ -58,9 +64,6 @@ function App() {
   //changes the page to the page where the results of the basic quiz are displayed
   function changePageResultsB() {
     setResult(["Loading Results..."])
-    if (keyData === ""){
-      setResult(["Please enter an API Key"]);
-    }
     setPage("Results");
     generateBasic(basicAnswers).then(resolvedValue => {
       setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
@@ -111,38 +114,38 @@ function App() {
       )}
       {page === 'Home' && (
         <div className="Home">
-        <header className="Home-header">
-        Use these quizzes to help you find a career you love!
-        </header>
-        <p className="Description"> We use AI to analyze your answers to help you find the perfect career based on your interests and qualities</p>
-        <Container>
-      <Row className='col'>
-        <Col>
-          <div className="App-rect1">Basic Questions
-          <p> This Button will take you to some basic questions</p> 
-          <Button className = "lightButton" variant= "secondary" onClick={changePageBasic}>Basic Questions</Button>
-          </div>           
-        </Col>
-        <Col>
-          <div className="App-rect2">Detailed Questions
-          <p>This Button will take you to some detailed questions</p>
-          <Button className = "lightButton" variant= "secondary" onClick={changePageDetail}>Detailed Questions</Button>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+          <header className="Home-header">
+            Use these quizzes to help you find a career you love!
+          </header>
+          <p className="Description"> We use AI to analyze your answers to help you find the perfect career based on your interests and qualities</p>
+          <Container>
+            <Row className='col'>
+              <Col>
+                <div className="App-rect1">Basic Questions
+                <p> This Button will take you to some basic questions</p> 
+                <Button className = "lightButton" variant= "secondary" onClick={changePageBasic}>Basic Questions</Button>
+                </div>           
+              </Col>
+              <Col>
+                <div className="App-rect2">Detailed Questions
+                <p>This Button will take you to some detailed questions</p>
+                <Button className = "lightButton" variant= "secondary" onClick={changePageDetail}>Detailed Questions</Button>
+                </div>
+              </Col>
+            </Row>
+          </Container>
       </div>)}
-        <footer className="Home-footer">
-      These quizzes should not be used as the sole decision when considering a career
-        </footer>
-        <div className="API">
-          <Form className = "API-Key">
+      <footer className="Home-footer">
+        These quizzes should not be used as the sole decision when considering a career
+      </footer>
+      <div className="API">
+        <Form className = "API-Key">
           <Form.Label>API Key:</Form.Label>
           <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
           <br></br>
           <Button variant = "secondary" onClick={handleSubmit}>Submit</Button>
-      </Form>
-          </div>
+        </Form>
+      </div>
     </div>
   );
 }
