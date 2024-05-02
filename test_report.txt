@@ -150,12 +150,12 @@ All files            |    5.42 |     7.54 |    1.66 |    5.42 |
   reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
  src/components      |    1.15 |     2.56 |       0 |    1.15 |                   
   ChatGPT.tsx        |       4 |    14.28 |       0 |       4 | 6-72              
-  DetailedQs.tsx     |       0 |        0 |       0 |       0 | 6-97              
+  DetailedQs.tsx     |       0 |        0 |       0 |       0 | 6-98              
   MCQs.tsx           |       0 |        0 |       0 |       0 | 7-263             
   bar.tsx            |    12.5 |      100 |       0 |    12.5 | 9-20              
 ---------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.664 s
+Time:        2.639 s
 Ran all test suites.
