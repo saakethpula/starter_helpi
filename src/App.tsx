@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import {MCQs} from './components/MCQs';
-import { generateDetailed,generateBasic, checkKey } from './components/ChatGPT';
+import { generateDetailed,generateBasic } from './components/ChatGPT';
 import {DetailedQs} from './components/DetailedQs';
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
