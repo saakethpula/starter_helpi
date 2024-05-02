@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (70 ms)
+  ✕ renders learn react link (65 ms)
 
   ● renders learn react link
 
@@ -143,13 +143,13 @@ FAIL src/App.test.tsx
 ---------------------|---------|----------|---------|---------|-------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------|---------|----------|---------|---------|-------------------
-All files            |    5.52 |     7.54 |    1.66 |    5.52 |                   
- src                 |   22.22 |    21.42 |    8.33 |   22.22 |                   
-  App.tsx            |   29.41 |       25 |      10 |   29.41 | 12,23-66          
+All files            |    5.45 |     7.54 |    1.66 |    5.45 |                   
+ src                 |   20.83 |    21.42 |    8.33 |   20.83 |                   
+  App.tsx            |   27.02 |       25 |      10 |   27.02 | 12,23-69          
   index.tsx          |       0 |      100 |     100 |       0 | 8-20              
   reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
  src/components      |    1.16 |     2.56 |       0 |    1.16 |                   
-  ChatGPT.tsx        |       4 |    14.28 |       0 |       4 | 6-73              
+  ChatGPT.tsx        |       4 |    14.28 |       0 |       4 | 6-72              
   DetailedQs.tsx     |       0 |        0 |       0 |       0 | 6-96              
   MCQs.tsx           |       0 |        0 |       0 |       0 | 7-264             
   bar.tsx            |    12.5 |      100 |       0 |    12.5 | 9-20              
@@ -157,5 +157,5 @@ All files            |    5.52 |     7.54 |    1.66 |    5.52 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.727 s
+Time:        2.76 s
 Ran all test suites.
