@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (66 ms)
+  ✕ renders learn react link (63 ms)
 
   ● renders learn react link
 
@@ -38,11 +38,6 @@ FAIL src/App.test.tsx
             [36m>[39m
               [0mUse these quizzes to help you find a career you love![0m
             [36m</header>[39m
-            [36m<p[39m
-              [33mclass[39m=[32m"Description"[39m
-            [36m>[39m
-              [0m We use AI to analyze your answers to help you find the perfect career based on your interests and qualities[0m
-            [36m</p>[39m
             [36m<div[39m
               [33mclass[39m=[32m"container"[39m
             [36m>[39m
@@ -50,40 +45,32 @@ FAIL src/App.test.tsx
                 [33mclass[39m=[32m"col row"[39m
               [36m>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
+                  [33mclass[39m=[32m"App-rect1"[39m
                 [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"App-rect1"[39m
+                  [0mBasic Questions[0m
+                  [36m<p>[39m
+                    [0m This Button will take you to our "Basic Questions" quiz, which consists of 7 multiple choice questions. If you would like more questions, you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.[0m
+                  [36m</p>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"lightButton btn btn-secondary"[39m
+                    [33mtype[39m=[32m"button"[39m
                   [36m>[39m
                     [0mBasic Questions[0m
-                    [36m<p>[39m
-                      [0m This Button will take you to some basic questions[0m
-                    [36m</p>[39m
-                    [36m<button[39m
-                      [33mclass[39m=[32m"lightButton btn btn-secondary"[39m
-                      [33mtype[39m=[32m"button"[39m
-                    [36m>[39m
-                      [0mBasic Questions[0m
-                    [36m</button>[39m
-                  [36m</div>[39m
+                  [36m</button>[39m
                 [36m</div>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
+                  [33mclass[39m=[32m"App-rect2"[39m
                 [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"App-rect2"[39m
+                  [0mDetailed Questions[0m
+                  [36m<p>[39m
+                    [0mThis Button will take you to our "Detailed Questions" quiz, which consists of 7 short respose questions. Take this quiz for a more in depth career analysis. If you would like more questions, you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.[0m
+                  [36m</p>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"lightButton btn btn-secondary"[39m
+                    [33mtype[39m=[32m"button"[39m
                   [36m>[39m
                     [0mDetailed Questions[0m
-                    [36m<p>[39m
-                      [0mThis Button will take you to some detailed questions[0m
-                    [36m</p>[39m
-                    [36m<button[39m
-                      [33mclass[39m=[32m"lightButton btn btn-secondary"[39m
-                      [33mtype[39m=[32m"button"[39m
-                    [36m>[39m
-                      [0mDetailed Questions[0m
-                    [36m</button>[39m
-                  [36m</div>[39m
+                  [36m</button>[39m
                 [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
@@ -157,5 +144,5 @@ All files            |    5.42 |     7.54 |    1.66 |    5.42 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.639 s
+Time:        2.606 s
 Ran all test suites.
