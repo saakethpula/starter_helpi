@@ -117,21 +117,18 @@ function App() {
           <header className="Home-header">
             Use these quizzes to help you find a career you love!
           </header>
-          <p className="Description"> We use AI to analyze your answers to help you find the perfect career based on your interests and qualities</p>
           <Container>
             <Row className='col'>
-              <Col>
                 <div className="App-rect1">Basic Questions
-                <p> This Button will take you to some basic questions</p> 
+                <p> This Button will take you to our "Basic Questions" quiz, which consists of 7 multiple choice questions. If you would like more questions,
+                  you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.</p> 
                 <Button className = "lightButton" variant= "secondary" onClick={changePageBasic}>Basic Questions</Button>
                 </div>           
-              </Col>
-              <Col>
                 <div className="App-rect2">Detailed Questions
-                <p>This Button will take you to some detailed questions</p>
+                <p>This Button will take you to our "Detailed Questions" quiz, which consists of 7 short respose questions. Take this quiz for a more in depth career analysis. If you would like more questions,
+                  you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.</p>
                 <Button className = "lightButton" variant= "secondary" onClick={changePageDetail}>Detailed Questions</Button>
                 </div>
-              </Col>
             </Row>
           </Container>
       </div>)}
