@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Container, Form, Row } from 'react-bootstrap';
 import {MCQs} from './components/MCQs';
 import { generateDetailed,generateBasic } from './components/ChatGPT';
 import {DetailedQs} from './components/DetailedQs';
