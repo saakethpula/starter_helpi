@@ -130,7 +130,7 @@ function App() {
             Use these quizzes to help you find a career you love!
           </header>
           <Container>
-            <Row className='col'>
+          <img src="https://imgur.com/YGfDoV2.png" alt="Career Quiz" className = "Pic1"/>
                 <div className="App-rect1">Basic Questions
                 <p> This Button will take you to our "Basic Questions" quiz, which consists of 7 multiple choice questions. If you would like more questions,
                   you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.</p> 
@@ -141,7 +141,6 @@ function App() {
                   you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.</p>
                 <Button className = "lightButton" variant= "secondary" onClick={changePageDetail}>Detailed Questions</Button>
                 </div>
-            </Row>
           </Container>
       </div>)}
       <footer className="Home-footer">
