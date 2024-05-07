@@ -1,22 +1,21 @@
+
 .App {
   text-align: center;
   display: center;
-  background-color: rgb(248, 248, 231);
-}
+  background-color: transparent;}
 .Home {
   text-align: center;
   display: center;
   margin-bottom: 5%;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: rgb(248, 248, 231);
-}
+  background-color: transparent;}
 .Basic {
   text-align: center;
   display: center;
   margin-left: 10%;
   margin-right: 10%;
-  background-color:rgb(248, 248, 231);
+  background-color:transparent;
 }
 .Detail {
   text-align: center;
@@ -31,7 +30,7 @@
   display: center;
   margin-left: 10%;
   margin-right: 10%;
-  background-color:rgb(248, 248, 231);
+  background-color: transparent;
 }
 
 .moreBasic {
@@ -39,7 +38,7 @@
   display: center;
   margin-left: 10%;
   margin-right: 10%;
-  background-color:rgb(248, 248, 231);
+  background-color: transparent;
 }
 
 
@@ -55,7 +54,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  background-color: rgb(248, 248, 231);
+  background-color: transparent;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -72,12 +71,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  background-color: rgb(248, 248, 231);
-}
+  background-color: transparent;}
 
 .Home-header {
-  background-color: rgb(248, 248, 231);
-  min-height: 100vh;
+  background-color: transparent;  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,6 +84,7 @@
   margin-top: -20%;
   margin-left:18%;
   margin-right: 18%;
+  margin-bottom: -20%;
 }
 
 .Description {
@@ -94,8 +92,7 @@
   font-size: 140%;
   color: rgb(17, 2, 2);
   margin-bottom: 10%;
-  background-color: rgb(248, 248, 231);
-  margin-left: 10%;
+  background-color: transparent;  margin-left: 10%;
   margin-right: 10%;
 }
 
@@ -108,8 +105,7 @@
   justify-content: center;
   color: rgb(12, 128, 173);
   font-weight: bold;
-  background-color: rgb(248, 248, 231);
-  margin-bottom: 10%;
+  background-color: transparent;  margin-bottom: 10%;
 
 }
 
@@ -118,8 +114,7 @@
   display: block;
   font-weight: normal;
   color: rgb(17, 2, 2);
-  background-color: rgb(248, 248, 231);
-}
+  background-color: transparent;}
 
 .App-rect2 {
   width: 49%;
@@ -130,16 +125,14 @@
   justify-content: center;
   font-weight: bold;
   color: rgb(12, 128, 173);
-  background-color: rgb(248, 248, 231);
-}
+  background-color: transparent;}
 
 .App-rect2 p {
   margin-top: 5%;
   display: block;
   font-weight: normal;
   color: rgb(17, 2, 2);
-  background-color: rgb(248, 248, 231);
-}
+  background-color: transparent;}
 
 .Home-footer {
   background-color: #ffffff;
@@ -155,16 +148,14 @@
     color: black;
     font-weight: bold;
     color: rgb(12, 128, 173);
-    background-color: rgb(248, 248, 231);
-  }
+    background-color: transparent;  }
 
   .App-rect2 p {
     margin-top: 5%;
     display: block;
     font-weight: normal;
     color: rgb(17, 2, 2);
-    background-color: rgb(248, 248, 231);
-  }
+    background-color: transparent;  }
 
   .Home-footer{
     background-color: #ffffff;
@@ -175,8 +166,7 @@
     font-size: 100%;
     color: rgb(17, 2, 2);
     margin-bottom: 1%;
-    background-color: rgb(248, 248, 231);
-  }
+    background-color: transparent;  }
 
 .App-link {
   color: #61dafb;
@@ -215,13 +205,11 @@
 }
 .Space{
   margin-bottom: 2%;
-  background-color: rgb(248, 248, 231);
-}
+  background-color: transparent;}
 .homeButton {
   margin-top: 2%;
   margin-left: 1%;
-  background-color: rgb(248, 248, 231);
-}
+  background-color: transparent;}
 
 .Space .form-check input[type="radio"] {
   float: none;
@@ -249,4 +237,7 @@
   position: relative;
   background-color: rgb(12, 128, 173);
   z-index:2;
+}
+.loadingGif {
+  margin-top: -10%;
 }

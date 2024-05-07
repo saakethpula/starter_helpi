@@ -13,17 +13,19 @@ if (prevKey !== null) {
 }
 
 function App() {
-  const [result, setResult] = useState<string[]>(["Loading Results..."]);
+  const [result, setResult] = useState<string[]>([]);
   const [detailedAnswers] = useState<string[]>(["","","","","","",""]); 
   const [basicAnswers] = useState<string[]>(["","","","","","",""]); // Initialize the state with an array of 7 empty strings
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [page, setPage] = useState<string>("Home");
+  const [loading, isLoading] = useState<boolean>(true);
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
     window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
     setPage("Home");
   }
+
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
@@ -46,7 +48,7 @@ function App() {
   function changePageDetail() {
     setPage("Detail");
     console.log("changed")
-    setResult(["Loading Results..."])
+    setResult([""])
     if (keyData === ""){
       setPage("Results");
       setResult(["Please enter an API Key"]);
@@ -54,19 +56,21 @@ function App() {
   }
   //changes the page to the page where the results of the detailed quiz are displayed
   async function changePageResultsD() {
-    setResult(["Loading Results..."])
+    setResult([""])
     setPage("Results");
     generateDetailed(detailedAnswers).then(resolvedValue => {
       setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
+      isLoading(false);
     });
     console.log(result);
   }
   //changes the page to the page where the results of the basic quiz are displayed
   function changePageResultsB() {
-    setResult(["Loading Results..."])
+    setResult([""])
     setPage("Results");
     generateBasic(basicAnswers).then(resolvedValue => {
       setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
+      isLoading(false);
     });
   }
   
@@ -92,7 +96,13 @@ function App() {
       )}
       {page === 'Results' && (
         <div className="Results">
-          <p className='chatResults'> {result[0]} </p>
+        {loading && (
+          <div>
+            <p className='Home-header'> Analyzing Answers... </p>
+            <img src="https://imgur.com/q8wZzGY.gif" alt="Loading GIF" className = "loadingGif"/>
+          </div>
+        )}          
+        <p className='chatResults'> {result[0]} </p>
           <p className='chatResults'> 
             <a href=  {"https://" + (result[1] ? result[1].replace(/\s/g, '') : '' )} target="_blank" rel="noreferrer" >
             {result[1]}
