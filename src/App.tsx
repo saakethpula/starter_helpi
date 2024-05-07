@@ -82,6 +82,7 @@ function App() {
     <div className='background'>
       <div className = "diffHeader">
         <Button className="homeButton" variant= "secondary" onClick={changePageHome} >Home</Button>
+        <h1 className = "title">You and Careers!</h1>
         <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
       </div>
         {page === 'Basic' && (
