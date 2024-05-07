@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (72 ms)
+  ✕ renders learn react link (65 ms)
 
   ● renders learn react link
 
@@ -24,6 +24,11 @@ FAIL src/App.test.tsx
             [36m>[39m
               [0mHome[0m
             [36m</button>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"title"[39m
+            [36m>[39m
+              [0mYou and Careers![0m
+            [36m</h1>[39m
             [36m<img[39m
               [33malt[39m=[32m"Logo of UNC"[39m
               [33mclass[39m=[32m"logo"[39m
@@ -145,5 +150,5 @@ All files            |    5.75 |      7.4 |    1.66 |    5.75 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.796 s
+Time:        2.737 s
 Ran all test suites.
