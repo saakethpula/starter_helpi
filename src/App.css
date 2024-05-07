@@ -124,12 +124,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   color: rgb(12, 128, 173);
   font-weight: bold;
-  background-color: 
-  transparent;  margin-bottom: 10%;
-
+  background-color: transparent;
+  margin-bottom: 10%;
+  margin-left: 50%;
 }
 
 .App-rect1 p {
@@ -162,8 +162,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 40%;
   font-family: 'MyFont', sans-serif; 
-
 }
 
   .App-rect2 {
@@ -270,6 +270,9 @@
 }
 .loadingGif {
   margin-top: -10%;
+}
+.Pic1{
+  margin-top: 10%;
 }
 .row {
   margin-left: 70%;
