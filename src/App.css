@@ -9,7 +9,11 @@
   margin-bottom: 5%;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: transparent;}
+  background-color: transparent;
+  font-family: 'MyFont', sans-serif; 
+
+}
+  
 .Basic {
   text-align: center;
   display: center;
@@ -62,6 +66,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@font-face { 
+  font-family: 'MyFont'; 
+  src: url('MADE Gentle PERSONAL USE.otf') format('opentype'); 
+  font-weight: normal; 
+  font-style: normal; 
+} 
 
 .App-header {
   min-height: 100vh;
@@ -74,7 +84,8 @@
   background-color: transparent;}
 
 .Home-header {
-  background-color: transparent;  min-height: 100vh;
+  background-color: transparent;  
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,6 +96,16 @@
   margin-left:18%;
   margin-right: 18%;
   margin-bottom: -20%;
+  
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -3%;
+  margin-bottom: 3%;
+  font-family: 'MyFont', sans-serif; 
+
 }
 
 .Description {
@@ -94,6 +115,7 @@
   margin-bottom: 10%;
   background-color: transparent;  margin-left: 10%;
   margin-right: 10%;
+  font-weight: bold;
 }
 
 .App-rect1 {
@@ -105,7 +127,8 @@
   justify-content: right;
   color: rgb(12, 128, 173);
   font-weight: bold;
-  background-color: transparent;  margin-bottom: 10%;
+  background-color: transparent;
+  margin-bottom: 10%;
   margin-left: 50%;
 }
 
@@ -140,6 +163,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 40%;
+  font-family: 'MyFont', sans-serif; 
 }
 
   .App-rect2 {
@@ -201,7 +225,7 @@
   width: 7%;
   height: 7%;
   margin-top: -4%;
-  background-color: rgb(12, 128, 173);
+  background-color:transparent;
 
 }
 .Space{
@@ -210,7 +234,9 @@
 .homeButton {
   margin-top: 2%;
   margin-left: 1%;
-  background-color: transparent;}
+  background-color: transparent;
+
+}
 
 .Space .form-check input[type="radio"] {
   float: none;
@@ -220,6 +246,7 @@
 
 .background {
   background-color: rgb(248, 248, 231);
+  background-size: cover;
   position: relative;
   z-index: 1;
 }
@@ -233,6 +260,8 @@
 .API-Key{
   margin-left: 5%;
   margin-right: 5%;
+  font-family: 'MyFont', sans-serif; 
+
 }
 .diffHeader{
   position: relative;
@@ -244,4 +273,7 @@
 }
 .Pic1{
   margin-top: 10%;
+}
+.row {
+  margin-left: 70%;
 }
