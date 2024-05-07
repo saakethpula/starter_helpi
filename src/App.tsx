@@ -18,7 +18,7 @@ function App() {
   const [basicAnswers] = useState<string[]>(["","","","","","",""]); // Initialize the state with an array of 7 empty strings
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [page, setPage] = useState<string>("Home");
-  const [loading, isLoading] = useState<boolean>(true);
+  const [loading, isLoading] = useState<boolean>(false);
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
@@ -58,6 +58,7 @@ function App() {
   async function changePageResultsD() {
     setResult([""])
     setPage("Results");
+    isLoading(true);
     generateDetailed(detailedAnswers).then(resolvedValue => {
       setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
       isLoading(false);
@@ -68,6 +69,7 @@ function App() {
   function changePageResultsB() {
     setResult([""])
     setPage("Results");
+    isLoading(true);
     generateBasic(basicAnswers).then(resolvedValue => {
       setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
       isLoading(false);
@@ -99,7 +101,7 @@ function App() {
         {loading && (
           <div>
             <p className='Home-header'> Analyzing Answers... </p>
-            <img src="https://imgur.com/q8wZzGY.gif" alt="Loading GIF" className = "loadingGif"/>
+            <img src="https://imgur.com/q8wZzGY.gif" alt="Loading GIF" className = ""/>
           </div>
         )}          
         <p className='chatResults'> {result[0]} </p>
