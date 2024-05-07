@@ -271,8 +271,11 @@
 .loadingGif {
   margin-top: -10%;
 }
-.Pic1{
-  margin-top: 10%;
+.Pic{
+  height: 30%;
+  width: 30%;
+  display:flex;
+  margin-bottom: -30%;
 }
 .row {
   margin-left: 70%;
