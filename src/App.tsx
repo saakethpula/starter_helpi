@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Button, Container, Form, Row } from 'react-bootstrap';
+import { Button, Container, Form} from 'react-bootstrap';
 import {MCQs} from './components/MCQs';
 import { generateDetailed,generateBasic } from './components/ChatGPT';
 import {DetailedQs} from './components/DetailedQs';
@@ -82,7 +82,6 @@ function App() {
     <div className='background'>
       <div className = "diffHeader">
         <Button className="homeButton" variant= "secondary" onClick={changePageHome} >Home</Button>
-        <h1 className = "title">You and Careers!</h1>
         <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
       </div>
         {page === 'Basic' && (
@@ -132,8 +131,6 @@ function App() {
           </header>
           <Container>
           <img src="https://imgur.com/YGfDoV2.png" alt="Career Quiz" className = "Pic1"/>
-          <Container className='col'>
-            <Row>
                 <div className="App-rect1">Basic Questions
                 <p> This Button will take you to our "Basic Questions" quiz, which consists of 7 multiple choice questions. If you would like more questions,
                   you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.</p> 
