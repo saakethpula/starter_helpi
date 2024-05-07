@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (65 ms)
+  ✕ renders learn react link (68 ms)
 
   ● renders learn react link
 
@@ -48,7 +48,7 @@ FAIL src/App.test.tsx
             [36m>[39m
               [36m<img[39m
                 [33malt[39m=[32m"Career Quiz"[39m
-                [33mclass[39m=[32m"Pic1"[39m
+                [33mclass[39m=[32m"Pic"[39m
                 [33msrc[39m=[32m"https://imgur.com/YGfDoV2.png"[39m
               [36m/>[39m
               [36m<div[39m
@@ -56,7 +56,7 @@ FAIL src/App.test.tsx
               [36m>[39m
                 [0mBasic Questions[0m
                 [36m<p>[39m
-                  [0m This Button will take you to our "Basic Questions" quiz, which consists of 7 multiple choice questions. If you would like more questions, you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.[0m
+                  [0mThis Button will take you to our "Basic Questions" quiz, which consists of 7 multiple choice questions. If you would like more questions, you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.[0m
                 [36m</p>[39m
                 [36m<button[39m
                   [33mclass[39m=[32m"lightButton btn btn-secondary"[39m
@@ -150,5 +150,5 @@ All files            |    5.75 |      7.4 |    1.66 |    5.75 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.737 s
+Time:        3.106 s
 Ran all test suites.
