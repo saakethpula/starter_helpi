@@ -81,21 +81,42 @@ function App() {
     //displays the logo
     <div className='background'>
       <div className = "diffHeader">
-        <Button className="homeButton" variant= "secondary" onClick={changePageHome} >Home</Button>
-        <h1 className = "title">You and Careers!</h1>
-        <img className = "logo" src="https://i.imgur.com/wnwq3pn.png" alt="Logo of UNC" />
+        <img className = "yo" src = "https://i.imgur.com/30zTzzz.png" onClick={changePageHome} alt = "homebutton" ></img>
       </div>
         {page === 'Basic' && (
         <div className="Basic">
         <MCQs></MCQs>
         <Button className="Submit-Button" variant="secondary" onClick={changePageResultsB}>Submit</Button>
+        <footer className="basic-footer">
+        These quizzes should not be used as the sole decision when considering a career
+      </footer>
+      <div className="API">
+        <Form className = "API-Key">
+          <Form.Label>API Key:</Form.Label>
+          <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+          <br></br>
+          <Button variant = "secondary" onClick={handleSubmit}>Submit</Button>
+        </Form>
+      </div>
         </div>
       )}
       {page === 'Detail' && (
         <div className="Detail">
           <DetailedQs></DetailedQs>
           <Button className="Submit-Button" variant = "secondary" onClick = {changePageResultsD}>Submit</Button>
+          <footer className="detail-footer">
+        These quizzes should not be used as the sole decision when considering a career
+      </footer>
+      <div className="API">
+        <Form className = "API-Key">
+          <Form.Label>API Key:</Form.Label>
+          <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+          <br></br>
+          <Button variant = "secondary" onClick={handleSubmit}>Submit</Button>
+        </Form>
+      </div>
         </div>
+        
       )}
       {page === 'Results' && (
         <div className="Results">
@@ -123,32 +144,7 @@ function App() {
             {result[5]}
             </a> 
           </p>
-        </div>
-      )}
-      {page === 'Home' && (
-        <div className="Home">
-          <header className="Home-header">
-            Use these quizzes to help you find a career you love!
-          </header>
-          <Container>
-            <img src="https://imgur.com/YGfDoV2.png" alt="Career Quiz" className = "Pic"/>
-            <div className="App-rect1">Basic Questions
-              <p> 
-                This Button will take you to our "Basic Questions" quiz, which consists of 7 multiple choice questions. If you would like more questions,
-                you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.
-              </p> 
-              <Button className = "lightButton" variant= "secondary" onClick={changePageBasic}>Basic Questions</Button>
-            </div>           
-            <div className="App-rect2">Detailed Questions
-                <p>
-                  This Button will take you to our "Detailed Questions" quiz, which consists of 7 short respose questions. Take this quiz for a more in depth career analysis. If you would like more questions,
-                  you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.
-                </p>
-              <Button className = "lightButton" variant= "secondary" onClick={changePageDetail}>Detailed Questions</Button>
-            </div>
-          </Container>
-      </div>)}
-      <footer className="Home-footer">
+          <footer className="results-footer">
         These quizzes should not be used as the sole decision when considering a career
       </footer>
       <div className="API">
@@ -159,6 +155,42 @@ function App() {
           <Button variant = "secondary" onClick={handleSubmit}>Submit</Button>
         </Form>
       </div>
+        </div>
+      )}
+      {page === 'Home' && (
+        <div className="Home">
+
+          <Container>
+            <img src="https://imgur.com/YGfDoV2.png" alt="Career Quiz" className = "Pic"/>
+            <div className="App-rect1">Basic Questions
+              <p> 
+                This Button will take you to our "Basic Questions" quiz, which consists of 7 multiple choice questions. If you would like more questions,
+                you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.
+              </p> 
+              <Button className = "lightButton" variant= "secondary" onClick={changePageBasic}>Basic Questions</Button>
+            </div>           
+            <img src="https://i.imgur.com/beA1q0N.png" alt="Career Quiz" className = "Pic"/>
+
+            <div className="App-rect2">Detailed Questions
+                <p>
+                  This Button will take you to our "Detailed Questions" quiz, which consists of 7 short respose questions. Take this quiz for a more in depth career analysis. If you would like more questions,
+                  you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.
+                </p>
+              <Button className = "lightButton" variant= "secondary" onClick={changePageDetail}>Detailed Questions</Button>
+            </div>
+          </Container>
+          <footer className="Home-footer">
+        These quizzes should not be used as the sole decision when considering a career
+      </footer>
+      <div className="API">
+        <Form className = "API-Key">
+          <Form.Label>API Key:</Form.Label>
+          <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+          <br></br>
+          <Button variant = "secondary" onClick={handleSubmit}>Submit</Button>
+        </Form>
+      </div>
+      </div>)}
     </div>
   );
 }
