@@ -130,9 +130,9 @@ FAIL src/App.test.tsx
 ---------------------|---------|----------|---------|---------|-------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------|---------|----------|---------|---------|-------------------
-All files            |    5.42 |     7.54 |    1.66 |    5.42 |                   
- src                 |   20.83 |    21.42 |    8.33 |   20.83 |                   
-  App.tsx            |   27.02 |       25 |      10 |   27.02 | 12,23-69          
+All files            |     5.8 |      7.4 |    1.66 |     5.8 |                   
+ src                 |   21.56 |       20 |    8.33 |   21.56 |                   
+  App.tsx            |    27.5 |    23.07 |      10 |    27.5 | 12,24-73          
   index.tsx          |       0 |      100 |     100 |       0 | 8-20              
   reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
  src/components      |    1.15 |     2.56 |       0 |    1.15 |                   
@@ -144,5 +144,5 @@ All files            |    5.42 |     7.54 |    1.66 |    5.42 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.607 s
+Time:        2.835 s
 Ran all test suites.
