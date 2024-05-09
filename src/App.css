@@ -12,6 +12,7 @@
   font-family: 'MyFont', sans-serif; 
 
 }
+
   
 .Basic {
   text-align: center;
@@ -295,4 +296,8 @@
   display: block;
   justify-content: center;
   align-items: center;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: rgb(143, 143, 143) !important;
+  border: transparent !important;
 }
