@@ -86,7 +86,7 @@ function App() {
         {page === 'Basic' && (
         <div className="Basic">
         <MCQs></MCQs>
-        <Button className="Submit-Button" variant="secondary" onClick={changePageResultsB}>Submit</Button>
+        <Button className="Submit-Button" variant="primary" onClick={changePageResultsB}>Submit</Button>
         <footer className="basic-footer">
         These quizzes should not be used as the sole decision when considering a career
       </footer>
@@ -103,7 +103,7 @@ function App() {
       {page === 'Detail' && (
         <div className="Detail">
           <DetailedQs></DetailedQs>
-          <Button className="Submit-Button" variant = "secondary" onClick = {changePageResultsD}>Submit</Button>
+          <Button className="Submit-Button" variant = "primary" onClick = {changePageResultsD}>Submit</Button>
           <footer className="detail-footer">
         These quizzes should not be used as the sole decision when considering a career
       </footer>
@@ -167,7 +167,7 @@ function App() {
                 This Button will take you to our "Basic Questions" quiz, which consists of 7 multiple choice questions. If you would like more questions,
                 you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.
               </p> 
-              <Button className = "lightButton" variant= "secondary" onClick={changePageBasic}>Basic Questions</Button>
+              <Button className = "lightButton" variant= "primary" onClick={changePageBasic}>Basic Questions</Button>
             </div>           
             <img src="https://i.imgur.com/beA1q0N.png" alt="Career Quiz" className = "Pic"/>
 
@@ -176,7 +176,7 @@ function App() {
                   This Button will take you to our "Detailed Questions" quiz, which consists of 7 short respose questions. Take this quiz for a more in depth career analysis. If you would like more questions,
                   you can click the "Generate more questions" button to generate 7 more questions for more accurate results. If you do not want to answer all of the questions that is fine and you may submit at any time.
                 </p>
-              <Button className = "lightButton" variant= "secondary" onClick={changePageDetail}>Detailed Questions</Button>
+              <Button className = "lightButton" variant= "primary" onClick={changePageDetail}>Detailed Questions</Button>
             </div>
           </Container>
           <footer className="Home-footer">
