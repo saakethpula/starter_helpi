@@ -169,7 +169,7 @@ function App() {
               </p> 
               <Button className = "lightButton" variant= "primary" onClick={changePageBasic}>Basic Questions</Button>
             </div>           
-            <img src="https://i.imgur.com/beA1q0N.png" alt="Career Quiz" className = "Pic"/>
+            <img src="https://i.imgur.com/beA1q0N.png" alt="Career Quiz" className = "Pic2"/>
 
             <div className="App-rect2">Detailed Questions
                 <p>
