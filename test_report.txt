@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (61 ms)
+  ✕ renders learn react link (63 ms)
 
   ● renders learn react link
 
@@ -51,7 +51,7 @@ FAIL src/App.test.tsx
               [36m</div>[39m
               [36m<img[39m
                 [33malt[39m=[32m"Career Quiz"[39m
-                [33mclass[39m=[32m"Pic"[39m
+                [33mclass[39m=[32m"Pic2"[39m
                 [33msrc[39m=[32m"https://i.imgur.com/beA1q0N.png"[39m
               [36m/>[39m
               [36m<div[39m
@@ -139,5 +139,5 @@ All files            |    5.75 |      7.4 |    1.66 |    5.75 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.853 s
+Time:        2.744 s
 Ran all test suites.
