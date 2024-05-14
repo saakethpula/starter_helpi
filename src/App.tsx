@@ -60,7 +60,7 @@ function App() {
     setPage("Results");
     isLoading(true);
     generateDetailed(detailedAnswers).then(resolvedValue => {
-      setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
+      setResult(resolvedValue || ["","","","","","","","","","","","","",""]); // Provide a default value for setResult
       isLoading(false);
     });
     console.log(result);
@@ -71,7 +71,7 @@ function App() {
     setPage("Results");
     isLoading(true);
     generateBasic(basicAnswers).then(resolvedValue => {
-      setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
+      setResult(resolvedValue || ["","","","","","","","","","","","","",""]); // Provide a default value for setResult
       isLoading(false);
     });
   }
