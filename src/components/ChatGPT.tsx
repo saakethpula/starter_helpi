@@ -34,6 +34,9 @@ export async function generateDetailed(detailedAnswers: string[]) {
   const result1 = result[0].split(":");
   const result2 = result[1].split(":");
   const result3= result[2].split(":");
+  if (result1[0] === "Job Name"){
+    await generateDetailed(detailedAnswers);
+  }
 
   return [result1[0], result1[1], result2[0], result2[1], result3[0], result3[1]];
 }
@@ -68,7 +71,9 @@ export async function generateBasic(basicAnswers: string[]) {
   const result1 = result[0].split(":");
   const result2 = result[1].split(":");
   const result3= result[2].split(":");
-
+  if (result1[0] === "Job Name"){
+    await generateBasic(basicAnswers);
+  }
 
   return [result1[0], result1[1], result2[0], result2[1], result3[0], result3[1]];
 }
