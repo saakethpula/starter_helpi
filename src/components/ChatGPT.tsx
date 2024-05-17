@@ -25,16 +25,13 @@ export async function generateDetailed(detailedAnswers: string[]) {
 
   const result = completion.choices[0].message.content?.split(",") ?? [];
   if (result === undefined) {
-    generateBasic(detailedAnswers);
-  }
-  if (result[0].length > 200) {
-    console.log("Error");
-    generateBasic(detailedAnswers);
+    await generateDetailed(detailedAnswers);
   }
   const result1 = result[0].split(":");
   const result2 = result[1].split(":");
   const result3= result[2].split(":");
-  if (result1[0] === "Job Name"){
+  if (result1[0] === "Job Name" || result1[0].length > 200){ // error handling scenario for if ChatGPT returns the jobs as just "Job Name" instead of their actual title
+    console.log("error, regenerating")                        // or if the job title is too long because chatgpt freaks out and doesn't follow the prompt
     await generateDetailed(detailedAnswers);
   }
 
@@ -64,17 +61,13 @@ export async function generateBasic(basicAnswers: string[]) {
   if (result === undefined) {
     generateBasic(basicAnswers);
   }
-  if (result[0].length > 200) {
-    console.log("Error");
-    generateBasic(basicAnswers);
-  }
   const result1 = result[0].split(":");
   const result2 = result[1].split(":");
   const result3= result[2].split(":");
-  if (result1[0] === "Job Name"){
+  if (result1[0] === "Job Name" || result1[0].length > 200){ // error handling scenario for if ChatGPT returns the jobs as just "Job Name" instead of their actual title
+    console.log("error, regenerating")                       // or if the job title is too long because chatgpt freaks out and doesn't follow the prompt
     await generateBasic(basicAnswers);
   }
-
   return [result1[0], result1[1], result2[0], result2[1], result3[0], result3[1]];
 }
 
