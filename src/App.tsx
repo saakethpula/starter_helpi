@@ -78,7 +78,7 @@ function App() {
   
 
   return (
-    //displays the logo
+    //displays the layout for each page
     <div className='background'>
       <div className = "diffHeader">
         <img className = "yo" src = "https://i.imgur.com/30zTzzz.png" onClick={changePageHome} alt = "homebutton" ></img>
