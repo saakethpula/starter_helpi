@@ -60,7 +60,7 @@ function App() {
     setPage("Results");
     isLoading(true);
     generateDetailed(detailedAnswers).then(resolvedValue => {
-      setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
+      setResult(resolvedValue || ["","","","","","","","","","","","","",""]); // Provide a default value for setResult
       isLoading(false);
     });
     console.log(result);
@@ -71,14 +71,14 @@ function App() {
     setPage("Results");
     isLoading(true);
     generateBasic(basicAnswers).then(resolvedValue => {
-      setResult(resolvedValue || ["","","","","",""]); // Provide a default value for setResult
+      setResult(resolvedValue || ["","","","","","","","","","","","","",""]); // Provide a default value for setResult
       isLoading(false);
     });
   }
   
 
   return (
-    //displays the logo
+    //displays the layout for each page
     <div className='background'>
       <div className = "diffHeader">
         <img className = "yo" src = "https://i.imgur.com/30zTzzz.png" onClick={changePageHome} alt = "homebutton" ></img>
