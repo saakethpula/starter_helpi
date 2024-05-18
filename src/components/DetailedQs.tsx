@@ -19,6 +19,12 @@ export function DetailedQs(): JSX.Element {
         }
         clickedAnswers.push(qindex);
         console.log(detailedAnswers);
+        if (qindex === 6) {
+          alert('You have completed the quiz! Click submit to see your results or click the generate more questions buttons below to answer more questions.');
+        }
+        if (qindex === 13) {
+          alert('You have completed the quiz! Click submit to see your results.');
+        }
       }
       const [page, setPage] = useState<string>("");
       const [click, setClick] = useState<boolean>(false);
