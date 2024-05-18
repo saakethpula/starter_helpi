@@ -24,7 +24,9 @@ export function MCQs(): JSX.Element {
     const[isSelected12,setIsSelected12] = useState<boolean>(false);
     const[isSelected13,setIsSelected13] = useState<boolean>(false);
     const[isSelected14,setIsSelected14] = useState<boolean>(false);
-    
+    const [alertShown, setAlertShown] = useState(false);
+    const [alertShown2, setAlertShown2] = useState(false);
+
 // functions to update the progress bars
     function updateProgress1(){
         if(!isSelected1){
@@ -154,6 +156,10 @@ export function MCQs(): JSX.Element {
         }
         else if(index === 6){
             updateProgress7();
+            if (!alertShown) {
+                setAlertShown(true);
+                alert('You have completed the quiz! Click submit to see your results or click the generate more questions buttons below to answer more questions.');
+              }        
         }
         else if(index === 7){
             updateProgress8();
@@ -175,6 +181,10 @@ export function MCQs(): JSX.Element {
         }
         else if(index === 13){
             updateProgress14();
+            if (!alertShown2) {
+                setAlertShown2(true);
+                alert('You have completed the quiz! Click submit to see your results.');
+            }
         }
 
     }
@@ -205,12 +215,21 @@ export function MCQs(): JSX.Element {
     const [page, setPage] = useState<string>("");
     const [click, setClick] = useState<boolean>(false);
     const [moreBasic, setMoreBasic] = useState<boolean>(false);
+
+
     function generateQ(){
         setPage("moreBasic");
         setClick(true); 
         setMoreBasic(true);
     }
-
+    if (progress === 7 && !alertShown) {
+        setAlertShown(true);
+        alert('You have completed the quiz! Click submit to see your results or click the generate more questions buttons below to answer more questions.');
+      }
+    if (progress === 14 && click && !alertShown2) {
+        setAlertShown2(true);
+        alert('You have completed the quiz! Click submit to see your results or click the generate more questions buttons below to answer more questions.');
+    }
     return (
         //pprogress bar for the MCQs
         <><div className="Progress-Bar">

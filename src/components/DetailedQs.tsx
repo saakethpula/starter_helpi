@@ -22,11 +22,17 @@ export function DetailedQs(): JSX.Element {
         }
         clickedAnswers.push(qindex);
         console.log(detailedAnswers);
-    }
-    const [page, setPage] = useState<string>("");//state that keeps track of the page
-    const [click, setClick] = useState<boolean>(false);//state that keeps track of the button click
-    const [amount,setAmount] = useState<number>(7);//state that keeps track of the amount of questions which is inialised to 7
-
+        if (qindex === 6) {
+          alert('You have completed the quiz! Click submit to see your results or click the generate more questions buttons below to answer more questions.');
+        }
+        if (qindex === 13) {
+          alert('You have completed the quiz! Click submit to see your results.');
+        }
+      }
+      const [page, setPage] = useState<string>("");
+      const [click, setClick] = useState<boolean>(false);
+      const [amount,setAmount] = useState<number>(7);
+        
     //function that sets the page to moreDetails and sets the click to true and the amount of questions to 14
     function generateQ(){
         setPage("moreDetails");
