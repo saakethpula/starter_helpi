@@ -3,9 +3,11 @@ import { Button, Form } from 'react-bootstrap';
 import ProgressBar from './bar';
 
 export function DetailedQs(): JSX.Element {
-    const [index,setIndex] = useState<number>(0);
-    const [detailedAnswers, setDetailedAnswers] = useState<string[]>(["","","","","","","","","","","","","",""]);
-    const [clickedAnswers] = useState<number[]>([]);
+    const [index,setIndex] = useState<number>(0);//state that keeps track of the index of the question
+    const [detailedAnswers, setDetailedAnswers] = useState<string[]>(["","","","","","","","","","","","","",""]);//answers to the detailed questions
+    const [clickedAnswers] = useState<number[]>([]);//a state that keeps track of the questions that have been answered
+
+    //function that updates the answers to the detailed questions
     function addAnswer(answer: React.ChangeEvent<HTMLInputElement>){
         setDetailedAnswers(prevDetailedAnswers => {
           const newDetailedAnswers = [...prevDetailedAnswers]; // Make a copy of the previous state
@@ -13,7 +15,8 @@ export function DetailedQs(): JSX.Element {
           return newDetailedAnswers; // Return the new state
         });
       }
-      function updateIndex(qindex: number){
+    //function that updates the index of the question
+    function updateIndex(qindex: number){
         if (!clickedAnswers.includes(qindex)) {
           setIndex(index + 1);
         }
@@ -29,6 +32,8 @@ export function DetailedQs(): JSX.Element {
       const [page, setPage] = useState<string>("");
       const [click, setClick] = useState<boolean>(false);
       const [amount,setAmount] = useState<number>(7);
+        
+    //function that sets the page to moreDetails and sets the click to true and the amount of questions to 14
     function generateQ(){
         setPage("moreDetails");
         setClick(true);
@@ -36,6 +41,9 @@ export function DetailedQs(): JSX.Element {
     }
     
     return (
+      //pprogress bar for the Detailed questions and the Detailed questions themselves, 
+      //and the Generate more questions button with the questions that are displayed when you click the button
+        
         <><div className="Detail">
         <div className="Progress">{Math.round((index / amount) * 100)} % </div>
         <div className='Space'><ProgressBar value={index} maxValue={amount} /></div>
